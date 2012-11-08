@@ -16,11 +16,29 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BWCUtilities registerForGoogleAnalytics];
+    
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
+    
+    if ([BWCUtilities appUpgradeAvailable] && [BWCUtilities upgradeCheckAvailable])
+    {
+        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Update available" message:@"A newer version of this app is available. Please upgrade in the App Store" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
+        [alertView show];
+    }
+    
     return YES;
+}
+
+// clears the upgrade check so users aren't bugged repeatedly if they close the alert
+-(void) alertView:(UIAlertView*) alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+{
+    if ([alertView.title isEqualToString:@"Update available"])
+    {
+        [BWCUtilities muteUpgradeCheck];
+    }
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application

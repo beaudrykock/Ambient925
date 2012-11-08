@@ -18,6 +18,13 @@
 		9F44132E163D9F4400F3C645 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132D163D9F4400F3C645 /* Default@2x.png */; };
 		9F441330163D9F4400F3C645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132F163D9F4400F3C645 /* Default-568h@2x.png */; };
 		9F441333163D9F4400F3C645 /* Ambient925.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */; };
+		9F5B7C9A164BEAC000C6ED8A /* BWCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */; };
+		9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */; };
+		9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CB0164BF1BB00C6ED8A /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F5B7CB6164BF2B400C6ED8A /* JSONKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CB5164BF2B400C6ED8A /* JSONKit.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		9F5B7CC2164BF88F00C6ED8A /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CC1164BF88F00C6ED8A /* libGoogleAnalytics.a */; };
+		9F5B7CC4164BF89B00C6ED8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */; };
+		9F5B7CCB164C079600C6ED8A /* BWCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +43,23 @@
 		9F44132D163D9F4400F3C645 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9F44132F163D9F4400F3C645 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9F441332163D9F4400F3C645 /* Ambient925.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ambient925.xcdatamodel; sourceTree = "<group>"; };
+		9F5B7C98164BEAC000C6ED8A /* BWCUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCUtilities.h; path = Ambient925/BWCUtilities.h; sourceTree = "<group>"; };
+		9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCUtilities.m; path = Ambient925/BWCUtilities.m; sourceTree = "<group>"; };
+		9F5B7CA1164BEB2B00C6ED8A /* BWCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCDefines.h; path = Ambient925/BWCDefines.h; sourceTree = "<group>"; };
+		9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		9F5B7CAF164BF1BB00C6ED8A /* OpenUDID.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OpenUDID.h; sourceTree = "<group>"; };
+		9F5B7CB0164BF1BB00C6ED8A /* OpenUDID.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OpenUDID.m; sourceTree = "<group>"; };
+		9F5B7CB4164BF2B400C6ED8A /* JSONKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JSONKit.h; sourceTree = "<group>"; };
+		9F5B7CB5164BF2B400C6ED8A /* JSONKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JSONKit.m; sourceTree = "<group>"; };
+		9F5B7CBC164BF88900C6ED8A /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
+		9F5B7CBD164BF88900C6ED8A /* GAITrackedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITrackedViewController.h; sourceTree = "<group>"; };
+		9F5B7CBE164BF88900C6ED8A /* GAITracker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITracker.h; sourceTree = "<group>"; };
+		9F5B7CBF164BF88900C6ED8A /* GAITransaction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransaction.h; sourceTree = "<group>"; };
+		9F5B7CC0164BF88900C6ED8A /* GAITransactionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAITransactionItem.h; sourceTree = "<group>"; };
+		9F5B7CC1164BF88F00C6ED8A /* libGoogleAnalytics.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libGoogleAnalytics.a; sourceTree = "<group>"; };
+		9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		9F5B7CC9164C079600C6ED8A /* BWCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCLocationManager.h; sourceTree = "<group>"; };
+		9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCLocationManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,10 +67,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5B7CC4164BF89B00C6ED8A /* SystemConfiguration.framework in Frameworks */,
+				9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */,
 				9F441318163D9F4400F3C645 /* UIKit.framework in Frameworks */,
 				9F44131A163D9F4400F3C645 /* Foundation.framework in Frameworks */,
 				9F44131C163D9F4400F3C645 /* CoreGraphics.framework in Frameworks */,
 				9F44131E163D9F4400F3C645 /* CoreData.framework in Frameworks */,
+				9F5B7CC2164BF88F00C6ED8A /* libGoogleAnalytics.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -73,6 +100,8 @@
 		9F441316163D9F4300F3C645 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */,
+				9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */,
 				9F441317163D9F4300F3C645 /* UIKit.framework */,
 				9F441319163D9F4400F3C645 /* Foundation.framework */,
 				9F44131B163D9F4400F3C645 /* CoreGraphics.framework */,
@@ -86,7 +115,9 @@
 			children = (
 				9F441328163D9F4400F3C645 /* BWCAppDelegate.h */,
 				9F441329163D9F4400F3C645 /* BWCAppDelegate.m */,
+				9F5B7CCC164C079C00C6ED8A /* Helpers */,
 				9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */,
+				9F5B7C9C164BEAC400C6ED8A /* Utilities */,
 				9F441320163D9F4400F3C645 /* Supporting Files */,
 			);
 			path = Ambient925;
@@ -104,6 +135,62 @@
 				9F44132F163D9F4400F3C645 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		9F5B7C9C164BEAC400C6ED8A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B7CB8164BF80D00C6ED8A /* Google Analytics */,
+				9F5B7CB7164BF2B800C6ED8A /* JSONKit */,
+				9F5B7CAE164BF1BB00C6ED8A /* OpenUDID */,
+				9F5B7C98164BEAC000C6ED8A /* BWCUtilities.h */,
+				9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */,
+				9F5B7CA1164BEB2B00C6ED8A /* BWCDefines.h */,
+			);
+			name = Utilities;
+			path = ..;
+			sourceTree = "<group>";
+		};
+		9F5B7CAE164BF1BB00C6ED8A /* OpenUDID */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B7CAF164BF1BB00C6ED8A /* OpenUDID.h */,
+				9F5B7CB0164BF1BB00C6ED8A /* OpenUDID.m */,
+			);
+			name = OpenUDID;
+			path = "OpenUDID-master";
+			sourceTree = "<group>";
+		};
+		9F5B7CB7164BF2B800C6ED8A /* JSONKit */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B7CB4164BF2B400C6ED8A /* JSONKit.h */,
+				9F5B7CB5164BF2B400C6ED8A /* JSONKit.m */,
+			);
+			name = JSONKit;
+			sourceTree = "<group>";
+		};
+		9F5B7CB8164BF80D00C6ED8A /* Google Analytics */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B7CBC164BF88900C6ED8A /* GAI.h */,
+				9F5B7CBD164BF88900C6ED8A /* GAITrackedViewController.h */,
+				9F5B7CBE164BF88900C6ED8A /* GAITracker.h */,
+				9F5B7CBF164BF88900C6ED8A /* GAITransaction.h */,
+				9F5B7CC0164BF88900C6ED8A /* GAITransactionItem.h */,
+				9F5B7CC1164BF88F00C6ED8A /* libGoogleAnalytics.a */,
+			);
+			name = "Google Analytics";
+			path = Library;
+			sourceTree = "<group>";
+		};
+		9F5B7CCC164C079C00C6ED8A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B7CC9164C079600C6ED8A /* BWCLocationManager.h */,
+				9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */,
+			);
+			name = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -175,6 +262,10 @@
 				9F441326163D9F4400F3C645 /* main.m in Sources */,
 				9F44132A163D9F4400F3C645 /* BWCAppDelegate.m in Sources */,
 				9F441333163D9F4400F3C645 /* Ambient925.xcdatamodeld in Sources */,
+				9F5B7C9A164BEAC000C6ED8A /* BWCUtilities.m in Sources */,
+				9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */,
+				9F5B7CB6164BF2B400C6ED8A /* JSONKit.m in Sources */,
+				9F5B7CCB164C079600C6ED8A /* BWCLocationManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,6 +341,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ambient925/Ambient925-Prefix.pch";
 				INFOPLIST_FILE = "Ambient925/Ambient925-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+					"\"$(SRCROOT)/Library\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -261,6 +357,11 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ambient925/Ambient925-Prefix.pch";
 				INFOPLIST_FILE = "Ambient925/Ambient925-Info.plist";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/TestFlightSDK1\"",
+					"\"$(SRCROOT)/Library\"",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -285,6 +386,7 @@
 				9F441338163D9F4400F3C645 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
