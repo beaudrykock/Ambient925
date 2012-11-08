@@ -15,5 +15,6 @@
 +(void)registerForGoogleAnalytics;
 +(void)muteUpgradeCheck;
 +(BOOL)upgradeCheckAvailable;
++(void)launchParse;
 
 @end

@@ -11,7 +11,6 @@
 @implementation BWCParseManager
 
 #pragma mark - User account management
-
 -(void)newUserWithUsername:(NSString*)username
                   password:(NSString*)password
                   completion:(void (^)(void))completionBlock

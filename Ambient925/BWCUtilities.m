@@ -66,6 +66,11 @@
 
 +(void)launchParse
 {
+    // automatic user tracking is enabled from the start, which means
+    // sound samples can be associated with the user without the user
+    // having to login; if/when the user does want an account, this
+    // is then automatically associated with the PFUser object
+    
     [Parse setApplicationId:kParseApplicationID clientKey:kParseClientKey];
     [PFUser enableAutomaticUser];
 }
