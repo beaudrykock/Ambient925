@@ -9,6 +9,9 @@
 // UTILITIES
 #define kGoogleAnalyticsTrackingID @"UA-35216488-2"
 #define kTestFlightID @"6410a6f8585edb65208670f4da2dfba3_NDM3MzMyMDExLTExLTI4IDA0OjU3OjI0LjQ5NTU5Nw"
+#define kParseApplicationID @"Ysfw1WQVYe3e4H3prCvAlIGaOFirtsEeT4DH7Yqn"
+#define kParseClientKey @"0NvdG7jNXyMZemOPSJuW4qpwZG8rriQrlDr5WTXl"
+
 #define TESTING 1
 
 // USER DEFAULTS

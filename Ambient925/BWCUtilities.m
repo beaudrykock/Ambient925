@@ -64,4 +64,10 @@
     
 }
 
++(void)launchParse
+{
+    [Parse setApplicationId:kParseApplicationID clientKey:kParseClientKey];
+    [PFUser enableAutomaticUser];
+}
+
 @end

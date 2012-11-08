@@ -26,6 +26,20 @@
 		9F5B7CC4164BF89B00C6ED8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */; };
 		9F5B7CCB164C079600C6ED8A /* BWCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */; };
 		9F5B7CCE164C149C00C6ED8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CCD164C149C00C6ED8A /* CoreLocation.framework */; };
+		9F5B7CDD164C19ED00C6ED8A /* BWCCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CDC164C19ED00C6ED8A /* BWCCloudManager.m */; };
+		9F5B7CE0164C1AAA00C6ED8A /* BWCParseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CDF164C1AAA00C6ED8A /* BWCParseManager.m */; };
+		9F5B7CE6164C1BBD00C6ED8A /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CE5164C1BBD00C6ED8A /* Parse.framework */; };
+		9F5B7CEF164C1F6900C6ED8A /* PDKeychainBindings.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CEC164C1F6900C6ED8A /* PDKeychainBindings.m */; };
+		9F5B7CF0164C1F6900C6ED8A /* PDKeychainBindingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CEE164C1F6900C6ED8A /* PDKeychainBindingsController.m */; };
+		9F5B7CF9164C296700C6ED8A /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CF8164C296700C6ED8A /* Accounts.framework */; };
+		9F5B7CFB164C297E00C6ED8A /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CFA164C297E00C6ED8A /* Security.framework */; };
+		9F5B7CFD164C29AC00C6ED8A /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CFC164C29AC00C6ED8A /* Social.framework */; };
+		9F5B7CFF164C29B900C6ED8A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CFE164C29B900C6ED8A /* AudioToolbox.framework */; };
+		9F5B7D01164C29BF00C6ED8A /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D00164C29BF00C6ED8A /* CFNetwork.framework */; };
+		9F5B7D03164C29E000C6ED8A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D02164C29E000C6ED8A /* libsqlite3.dylib */; };
+		9F5B7D05164C29F200C6ED8A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */; };
+		9F5B7D07164C29F700C6ED8A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D06164C29F700C6ED8A /* StoreKit.framework */; };
+		9F5B7D09164C2A3000C6ED8A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +76,24 @@
 		9F5B7CC9164C079600C6ED8A /* BWCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCLocationManager.h; sourceTree = "<group>"; };
 		9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCLocationManager.m; sourceTree = "<group>"; };
 		9F5B7CCD164C149C00C6ED8A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		9F5B7CDB164C19ED00C6ED8A /* BWCCloudManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCCloudManager.h; path = Ambient925/BWCCloudManager.h; sourceTree = SOURCE_ROOT; };
+		9F5B7CDC164C19ED00C6ED8A /* BWCCloudManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCCloudManager.m; path = Ambient925/BWCCloudManager.m; sourceTree = SOURCE_ROOT; };
+		9F5B7CDE164C1AAA00C6ED8A /* BWCParseManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCParseManager.h; sourceTree = "<group>"; };
+		9F5B7CDF164C1AAA00C6ED8A /* BWCParseManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCParseManager.m; sourceTree = "<group>"; };
+		9F5B7CE5164C1BBD00C6ED8A /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		9F5B7CEB164C1F6900C6ED8A /* PDKeychainBindings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindings.h; sourceTree = "<group>"; };
+		9F5B7CEC164C1F6900C6ED8A /* PDKeychainBindings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindings.m; sourceTree = "<group>"; };
+		9F5B7CED164C1F6900C6ED8A /* PDKeychainBindingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PDKeychainBindingsController.h; sourceTree = "<group>"; };
+		9F5B7CEE164C1F6900C6ED8A /* PDKeychainBindingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PDKeychainBindingsController.m; sourceTree = "<group>"; };
+		9F5B7CF8164C296700C6ED8A /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		9F5B7CFA164C297E00C6ED8A /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		9F5B7CFC164C29AC00C6ED8A /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		9F5B7CFE164C29B900C6ED8A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		9F5B7D00164C29BF00C6ED8A /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		9F5B7D02164C29E000C6ED8A /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		9F5B7D06164C29F700C6ED8A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +101,15 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5B7D09164C2A3000C6ED8A /* AdSupport.framework in Frameworks */,
+				9F5B7D07164C29F700C6ED8A /* StoreKit.framework in Frameworks */,
+				9F5B7D05164C29F200C6ED8A /* MobileCoreServices.framework in Frameworks */,
+				9F5B7D03164C29E000C6ED8A /* libsqlite3.dylib in Frameworks */,
+				9F5B7D01164C29BF00C6ED8A /* CFNetwork.framework in Frameworks */,
+				9F5B7CFF164C29B900C6ED8A /* AudioToolbox.framework in Frameworks */,
+				9F5B7CFD164C29AC00C6ED8A /* Social.framework in Frameworks */,
+				9F5B7CFB164C297E00C6ED8A /* Security.framework in Frameworks */,
+				9F5B7CF9164C296700C6ED8A /* Accounts.framework in Frameworks */,
 				9F5B7CCE164C149C00C6ED8A /* CoreLocation.framework in Frameworks */,
 				9F5B7CC4164BF89B00C6ED8A /* SystemConfiguration.framework in Frameworks */,
 				9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */,
@@ -77,6 +118,7 @@
 				9F44131C163D9F4400F3C645 /* CoreGraphics.framework in Frameworks */,
 				9F44131E163D9F4400F3C645 /* CoreData.framework in Frameworks */,
 				9F5B7CC2164BF88F00C6ED8A /* libGoogleAnalytics.a in Frameworks */,
+				9F5B7CE6164C1BBD00C6ED8A /* Parse.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +145,16 @@
 		9F441316163D9F4300F3C645 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */,
+				9F5B7D06164C29F700C6ED8A /* StoreKit.framework */,
+				9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */,
+				9F5B7D02164C29E000C6ED8A /* libsqlite3.dylib */,
+				9F5B7D00164C29BF00C6ED8A /* CFNetwork.framework */,
+				9F5B7CFE164C29B900C6ED8A /* AudioToolbox.framework */,
+				9F5B7CFC164C29AC00C6ED8A /* Social.framework */,
+				9F5B7CFA164C297E00C6ED8A /* Security.framework */,
+				9F5B7CF8164C296700C6ED8A /* Accounts.framework */,
+				9F5B7CE5164C1BBD00C6ED8A /* Parse.framework */,
 				9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */,
 				9F5B7CCD164C149C00C6ED8A /* CoreLocation.framework */,
 				9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */,
@@ -144,6 +196,7 @@
 		9F5B7C9C164BEAC400C6ED8A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				9F5B7CF1164C1F6E00C6ED8A /* PDKeyChainBindings */,
 				9F5B7CB8164BF80D00C6ED8A /* Google Analytics */,
 				9F5B7CB7164BF2B800C6ED8A /* JSONKit */,
 				9F5B7CAE164BF1BB00C6ED8A /* OpenUDID */,
@@ -193,8 +246,24 @@
 			children = (
 				9F5B7CC9164C079600C6ED8A /* BWCLocationManager.h */,
 				9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */,
+				9F5B7CDB164C19ED00C6ED8A /* BWCCloudManager.h */,
+				9F5B7CDC164C19ED00C6ED8A /* BWCCloudManager.m */,
+				9F5B7CDE164C1AAA00C6ED8A /* BWCParseManager.h */,
+				9F5B7CDF164C1AAA00C6ED8A /* BWCParseManager.m */,
 			);
 			name = Helpers;
+			sourceTree = "<group>";
+		};
+		9F5B7CF1164C1F6E00C6ED8A /* PDKeyChainBindings */ = {
+			isa = PBXGroup;
+			children = (
+				9F5B7CEB164C1F6900C6ED8A /* PDKeychainBindings.h */,
+				9F5B7CEC164C1F6900C6ED8A /* PDKeychainBindings.m */,
+				9F5B7CED164C1F6900C6ED8A /* PDKeychainBindingsController.h */,
+				9F5B7CEE164C1F6900C6ED8A /* PDKeychainBindingsController.m */,
+			);
+			name = PDKeyChainBindings;
+			path = Ambient925;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -270,6 +339,10 @@
 				9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */,
 				9F5B7CB6164BF2B400C6ED8A /* JSONKit.m in Sources */,
 				9F5B7CCB164C079600C6ED8A /* BWCLocationManager.m in Sources */,
+				9F5B7CDD164C19ED00C6ED8A /* BWCCloudManager.m in Sources */,
+				9F5B7CE0164C1AAA00C6ED8A /* BWCParseManager.m in Sources */,
+				9F5B7CEF164C1F6900C6ED8A /* PDKeychainBindings.m in Sources */,
+				9F5B7CF0164C1F6900C6ED8A /* PDKeychainBindingsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,6 +415,10 @@
 		9F441337163D9F4400F3C645 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ambient925/Ambient925-Prefix.pch";
 				INFOPLIST_FILE = "Ambient925/Ambient925-Info.plist";
@@ -358,6 +435,10 @@
 		9F441338163D9F4400F3C645 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ambient925/Ambient925-Prefix.pch";
 				INFOPLIST_FILE = "Ambient925/Ambient925-Info.plist";
