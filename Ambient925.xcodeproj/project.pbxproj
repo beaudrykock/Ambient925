@@ -25,6 +25,7 @@
 		9F5B7CC2164BF88F00C6ED8A /* libGoogleAnalytics.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CC1164BF88F00C6ED8A /* libGoogleAnalytics.a */; };
 		9F5B7CC4164BF89B00C6ED8A /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */; };
 		9F5B7CCB164C079600C6ED8A /* BWCLocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */; };
+		9F5B7CCE164C149C00C6ED8A /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CCD164C149C00C6ED8A /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,7 @@
 		9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		9F5B7CC9164C079600C6ED8A /* BWCLocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCLocationManager.h; sourceTree = "<group>"; };
 		9F5B7CCA164C079600C6ED8A /* BWCLocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCLocationManager.m; sourceTree = "<group>"; };
+		9F5B7CCD164C149C00C6ED8A /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5B7CCE164C149C00C6ED8A /* CoreLocation.framework in Frameworks */,
 				9F5B7CC4164BF89B00C6ED8A /* SystemConfiguration.framework in Frameworks */,
 				9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */,
 				9F441318163D9F4400F3C645 /* UIKit.framework in Frameworks */,
@@ -101,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */,
+				9F5B7CCD164C149C00C6ED8A /* CoreLocation.framework */,
 				9F5B7CC3164BF89B00C6ED8A /* SystemConfiguration.framework */,
 				9F441317163D9F4300F3C645 /* UIKit.framework */,
 				9F441319163D9F4400F3C645 /* Foundation.framework */,
