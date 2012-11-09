@@ -117,8 +117,15 @@
     [PFUser logOut];
 }
 
+#pragma mark - Sound samples
+
+
 #pragma mark - Checkins
--(void)newCheckinWithLocation:(CLLocation*)loc andTags:(NSArray*)tags
+/*
+ * 1. Pushes check in information, and latest soundquote, to social networks
+ * 2. Updates the latest sound sample nearest to that location with the tags and comment
+ */
+-(void)newCheckInWithLocation:(CLLocation*)loc andTags:(NSArray*)tags andComment:(NSString*)comment toSocialChannels:(NSArray*)channels
 {
     
 }

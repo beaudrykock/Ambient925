@@ -17,7 +17,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [BWCUtilities registerForGoogleAnalytics];
-    [BWCUtilities launchParse];
+    [BWCUtilities launchCloud];
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.

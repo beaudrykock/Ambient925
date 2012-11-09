@@ -40,6 +40,8 @@
 		9F5B7D05164C29F200C6ED8A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */; };
 		9F5B7D07164C29F700C6ED8A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D06164C29F700C6ED8A /* StoreKit.framework */; };
 		9F5B7D09164C2A3000C6ED8A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */; };
+		9F622F3C164D19F200D3ABC6 /* BWCSoundSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */; };
+		9F622F41164D204700D3ABC6 /* BWCCloudGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,6 +96,10 @@
 		9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9F5B7D06164C29F700C6ED8A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		9F622F3A164D19F200D3ABC6 /* BWCSoundSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundSample.h; sourceTree = "<group>"; };
+		9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundSample.m; sourceTree = "<group>"; };
+		9F622F3F164D204700D3ABC6 /* BWCCloudGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCloudGateway.h; sourceTree = "<group>"; };
+		9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCloudGateway.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +177,7 @@
 			children = (
 				9F441328163D9F4400F3C645 /* BWCAppDelegate.h */,
 				9F441329163D9F4400F3C645 /* BWCAppDelegate.m */,
+				9F622F3E164D19F600D3ABC6 /* Models */,
 				9F5B7CCC164C079C00C6ED8A /* Helpers */,
 				9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */,
 				9F5B7C9C164BEAC400C6ED8A /* Utilities */,
@@ -266,6 +273,17 @@
 			path = Ambient925;
 			sourceTree = "<group>";
 		};
+		9F622F3E164D19F600D3ABC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9F622F3A164D19F200D3ABC6 /* BWCSoundSample.h */,
+				9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */,
+				9F622F3F164D204700D3ABC6 /* BWCCloudGateway.h */,
+				9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -343,6 +361,8 @@
 				9F5B7CE0164C1AAA00C6ED8A /* BWCParseManager.m in Sources */,
 				9F5B7CEF164C1F6900C6ED8A /* PDKeychainBindings.m in Sources */,
 				9F5B7CF0164C1F6900C6ED8A /* PDKeychainBindingsController.m in Sources */,
+				9F622F3C164D19F200D3ABC6 /* BWCSoundSample.m in Sources */,
+				9F622F41164D204700D3ABC6 /* BWCCloudGateway.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

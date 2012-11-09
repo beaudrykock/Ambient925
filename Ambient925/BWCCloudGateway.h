@@ -1,18 +1,23 @@
 //
-//  BWCCloudManager.h
+//  BWCCloudGateway.h
 //  Ambient925
 //
-//  Created by Beaudry Kock on 11/8/12.
+//  Created by Beaudry Kock on 11/9/12.
 //  Copyright (c) 2012 Better World Coding. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
-#import "BWCSoundSample.h"
+#import "BWCCloudManager.h"
+#import "BWCParseManager.h"
 
-@class CLLocation;
+@interface BWCCloudGateway : NSObject
+{
+    
+}
 
-@interface BWCCloudManager : NSObject
-{}
+@property (nonatomic, retain) BWCCloudManager *cloudManager;
+
++(BWCCloudGateway*) sharedInstance;
 
 // accounts
 -(void)newUserWithUsername:(NSString*)username password:(NSString*)password completion:(void (^)(void))completionBlock failure:(void (^)(void))failureBlock;
@@ -26,5 +31,6 @@
 
 // samples
 -(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
+
 
 @end
