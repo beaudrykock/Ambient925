@@ -28,8 +28,16 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-#ifdef TESTING    
+#ifdef TESTING   
+    
+#ifdef TEST_SAMPLE_UPLOAD
     [NSTimer scheduledTimerWithTimeInterval:kSamplingInterval target:self selector:@selector(testSampling) userInfo:nil repeats:YES];
+#endif
+    
+#ifdef TEST_CHECKIN
+    [self testCheckIn];
+#endif
+    
 #endif
 }
 
@@ -54,5 +62,9 @@
     
 }
 
+-(void)testCheckIn
+{
+    [[BWCCloudGateway sharedInstance] newCheckInWithTags:[NSArray arrayWithObjects:@"home", nil] andComment:@"Loud!"];
+}
 
 @end

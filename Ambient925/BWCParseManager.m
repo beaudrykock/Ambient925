@@ -150,12 +150,35 @@
 
 #pragma mark - Checkins
 /*
- * 1. Pushes check in information, and latest soundquote, to social networks
- * 2. Updates the latest sound sample nearest to that location with the tags and comment
+ * Updates the most recent sound sample with the tags and comment
  */
--(void)newCheckInWithLocation:(CLLocation*)loc andTags:(NSArray*)tags andComment:(NSString*)comment toSocialChannels:(NSArray*)channels
+-(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment
 {
+    // 1. retrieve most recent object
+    PFQuery *query = [PFQuery queryWithClassName:@"BWCSoundSample"];
+    [query orderByAscending:@"sampleDate"];
     
+    NSArray *objects = [query findObjects];
+    
+    PFObject *obj = [objects objectAtIndex:0];
+    
+    NSDate *date = (NSDate*)[obj objectForKey:@"sampleDate"];
+    NSLog(@"obj date created = %@", [date description]);
+    
+    // 2. add tag objects with SoundSample as parent
+    for (NSString *tag in tags)
+    {
+        PFObject *tagObj = [PFObject objectWithClassName:@"soundSampleTag"];
+        [tagObj setObject:tag forKey:@"tag"];
+        [tagObj setObject:obj forKey:@"parent"];
+        [tagObj saveInBackground];
+    }
+    
+    // 3. add comment object with SoundSample as parent
+    PFObject *commentObj = [PFObject objectWithClassName:@"soundSampleComment"];
+    [commentObj setObject:comment forKey:@"comment"];
+    [commentObj setObject:obj forKey:@"parent"];
+    [commentObj saveInBackground];
 }
 
 @end

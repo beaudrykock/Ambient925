@@ -28,7 +28,7 @@
 -(void)logoutLoggedInUser;
 
 // checkins
--(void)newCheckInWithLocation:(CLLocation*)loc andTags:(NSArray*)tags andComment:(NSString*)comment toSocialChannels:(NSArray*)channels;
+-(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment;
 
 // sampling
 -(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;

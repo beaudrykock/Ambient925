@@ -66,9 +66,9 @@
 }
 
 // checkins
--(void)newCheckInWithLocation:(CLLocation*)loc andTags:(NSArray*)tags andComment:(NSString*)comment toSocialChannels:(NSArray*)channels
+-(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment
 {
-    [self.cloudManager newCheckInWithLocation:loc andTags:tags andComment:comment toSocialChannels:channels];
+    [self.cloudManager newCheckInWithTags:tags andComment:comment];
 }
 
 // samples

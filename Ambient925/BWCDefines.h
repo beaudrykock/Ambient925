@@ -12,8 +12,6 @@
 #define kParseApplicationID @"Ysfw1WQVYe3e4H3prCvAlIGaOFirtsEeT4DH7Yqn"
 #define kParseClientKey @"0NvdG7jNXyMZemOPSJuW4qpwZG8rriQrlDr5WTXl"
 
-#define TESTING 1
-
 // USER DEFAULTS
 #define kUD_upgradeCheck @"upgradeCheck"
 
@@ -29,7 +27,15 @@
 #define kInternetReachableViaWWAN @"internetReachableViaWWAN"
 #define kInternetReachableViaWiFi @"internetReachableViaWiFi"
 
+// SHARING
+#define kFacebookSharing @"share_facebook"
+#define kTwitterSharing @"share_twitter"
+#define kFourSquareSharing @"share_foursquare"
+
 // DEBUGGING
+#define TESTING 1
+//#define TEST_SAMPLE_UPLOAD 1
+#define TEST_CHECKIN 1
 
 #define DEBUG_BWCPARSEMANAGER
 #define DEBUG_BWCCLOUDGATEWAY
