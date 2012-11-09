@@ -9,6 +9,7 @@
 #import "BWCCloudManager.h"
 #import <Parse/Parse.h>
 #import "PDKeychainBindings.h"
+#import "CLLocation+NSDictionary.h"
 
 @interface BWCParseManager : BWCCloudManager
 

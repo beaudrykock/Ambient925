@@ -118,7 +118,32 @@
 }
 
 #pragma mark - Sound samples
-
+-(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
+{
+    PFObject *soundSample = [PFObject objectWithClassName:@"BWCSoundSample"];
+    [soundSample setObject:[NSNumber numberWithFloat:sample.soundLevel] forKey:@"soundLevel"];
+    [soundSample setObject:[[sample sampleLocation] dictionaryRepresentation] forKey:@"sampleLocation"];
+    [soundSample setObject:[sample sampleDate] forKey:@"sampleDate"];
+    [soundSample setObject:[sample tags] forKey:@"tags"];
+    [soundSample setObject:[sample soundQuote] forKey:@"soundQuote"];
+    [soundSample saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+                                            {
+                                                if (succeeded)
+                                                {
+#ifdef DEBUG_BWCPARSEMANAGER
+                                                    NSLog(@"Sample upload succeeded");
+#endif
+                                                    completionBlock();
+                                                }
+                                                else
+                                                {
+#ifdef DEBUG_BWCPARSEMANAGER
+                                                    NSLog(@"Sample upload failed");
+#endif
+                                                    failureBlock();
+                                                }
+                                            }];
+}
 
 #pragma mark - Checkins
 /*

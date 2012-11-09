@@ -30,6 +30,10 @@
         [alertView show];
     }
     
+    // start reachability notifier - will post notification when internet reachability changes
+    // subscribe to kInternetReachable... notifications for access
+    self.reachabilityNotififier = [[BWCReachability alloc] init];
+    
     return YES;
 }
 
