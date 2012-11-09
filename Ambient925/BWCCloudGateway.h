@@ -24,6 +24,7 @@
 
 +(BWCCloudGateway*) sharedInstance;
 
+// PUBLIC METHODS
 // accounts
 -(void)newUserWithUsername:(NSString*)username password:(NSString*)password completion:(void (^)(void))completionBlock failure:(void (^)(void))failureBlock;
 -(void)loginUserWithUsername:(NSString*)username password:(NSString*)password completion:(void (^)(void))completionBlock failure:(void (^)(void))failureBlock;
@@ -33,9 +34,6 @@
 
 // checkins
 -(void)newCheckInWithLocation:(CLLocation*)loc andTags:(NSArray*)tags andComment:(NSString*)comment toSocialChannels:(NSArray*)channels;
-
-// samples
--(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
 
 // Methods unique to BWCCloudGateway
 -(void)queueSampleForUpload:(BWCSoundSample*)sample;

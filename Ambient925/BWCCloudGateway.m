@@ -5,6 +5,16 @@
 //  Created by Beaudry Kock on 11/9/12.
 //  Copyright (c) 2012 Better World Coding. All rights reserved.
 //
+/*
+ * TO USE
+ * 1. Get a shared instance, e.g. BWCCloudGateway *bcg = [BWCCloudGateway sharedInstance];
+ * 2. FOR SAMPLING UPLOADS: [bcg queueSampleForUpload:sample];
+ * 3. To pause/resume sampling: [bcg pauseUploads] or [bcg resumeUploads]
+ * 4. FOR USER ACCOUNT MANAGEMENT: refer to range of user account management methods
+ *
+ * Note: sample upload interval will automagically adjust when internet connection changes. If
+ * there is no connection, samples will continue queueing until a connection is avaialble
+ */
 
 #import "BWCCloudGateway.h"
 
