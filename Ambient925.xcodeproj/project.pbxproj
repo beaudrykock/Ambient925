@@ -53,6 +53,8 @@
 		9F622F9C164D5B6300D3ABC6 /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F5D164D5B6200D3ABC6 /* AFXMLRequestOperation.m */; };
 		9F622F9D164D5B6300D3ABC6 /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F5F164D5B6200D3ABC6 /* UIImageView+AFNetworking.m */; };
 		9F622FBE164D5C4D00D3ABC6 /* BWCReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622FBD164D5C4D00D3ABC6 /* BWCReachability.m */; };
+		9F622FC4164D6B7B00D3ABC6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F622FC3164D6B7B00D3ABC6 /* MainStoryboard.storyboard */; };
+		9F622FC8164D6BC100D3ABC6 /* BWCSoundBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622FC7164D6BC100D3ABC6 /* BWCSoundBoxViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,6 +136,9 @@
 		9F622F5F164D5B6200D3ABC6 /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UIImageView+AFNetworking.m"; path = "AFNetworking/UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
 		9F622FBC164D5C4D00D3ABC6 /* BWCReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCReachability.h; path = Ambient925/BWCReachability.h; sourceTree = SOURCE_ROOT; };
 		9F622FBD164D5C4D00D3ABC6 /* BWCReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCReachability.m; path = Ambient925/BWCReachability.m; sourceTree = SOURCE_ROOT; };
+		9F622FC3164D6B7B00D3ABC6 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
+		9F622FC6164D6BC100D3ABC6 /* BWCSoundBoxViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundBoxViewController.h; sourceTree = "<group>"; };
+		9F622FC7164D6BC100D3ABC6 /* BWCSoundBoxViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundBoxViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +216,8 @@
 			children = (
 				9F441328163D9F4400F3C645 /* BWCAppDelegate.h */,
 				9F441329163D9F4400F3C645 /* BWCAppDelegate.m */,
+				9F622FC3164D6B7B00D3ABC6 /* MainStoryboard.storyboard */,
+				9F622FC9164D6BC600D3ABC6 /* View Controllers */,
 				9F622F3E164D19F600D3ABC6 /* Models */,
 				9F5B7CCC164C079C00C6ED8A /* Helpers */,
 				9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */,
@@ -358,6 +365,15 @@
 			path = AFNetworking;
 			sourceTree = "<group>";
 		};
+		9F622FC9164D6BC600D3ABC6 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				9F622FC6164D6BC100D3ABC6 /* BWCSoundBoxViewController.h */,
+				9F622FC7164D6BC100D3ABC6 /* BWCSoundBoxViewController.m */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -414,6 +430,7 @@
 				9F44132C163D9F4400F3C645 /* Default.png in Resources */,
 				9F44132E163D9F4400F3C645 /* Default@2x.png in Resources */,
 				9F441330163D9F4400F3C645 /* Default-568h@2x.png in Resources */,
+				9F622FC4164D6B7B00D3ABC6 /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +465,7 @@
 				9F622F9C164D5B6300D3ABC6 /* AFXMLRequestOperation.m in Sources */,
 				9F622F9D164D5B6300D3ABC6 /* UIImageView+AFNetworking.m in Sources */,
 				9F622FBE164D5C4D00D3ABC6 /* BWCReachability.m in Sources */,
+				9F622FC8164D6BC100D3ABC6 /* BWCSoundBoxViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

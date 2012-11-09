@@ -18,13 +18,18 @@
 #define kUD_upgradeCheck @"upgradeCheck"
 
 // SAMPLING
-#define kSamplingInterval 60.0 // time interval between sound samples
-#define kDefaultUploadInterval 600.0 // default time interval for uploads
-#define kWWANUploadInterval 600.0 // time interval between uploads, for WWAN
-#define kWiFiUploadInterval 300.0 // time interval between uploads, for WiFi
-
+#ifdef TESTING
+    #define kSamplingInterval 1.0 // time interval between sound samples
+#else
+    #define kSamplingInterval 60.0 // time interval between sound samples
+#endif
 
 // AFNetworking notifications
 #define kInternetNotReachable @"internetNotReachable"
 #define kInternetReachableViaWWAN @"internetReachableViaWWAN"
 #define kInternetReachableViaWiFi @"internetReachableViaWiFi"
+
+// DEBUGGING
+
+#define DEBUG_BWCPARSEMANAGER
+#define DEBUG_BWCCLOUDGATEWAY

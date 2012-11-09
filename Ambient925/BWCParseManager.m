@@ -25,14 +25,14 @@
 #ifdef DEBUG_BWCPARSEMANAGER
             NSLog(@"Success in signing up user");
 #endif
-            completionBlock();
+            if (completionBlock != nil) completionBlock();
             
         } else {
 #ifdef DEBUG_BWCPARSEMANAGER
             NSString *errorString = [[error userInfo] objectForKey:@"error"];
             NSLog(@"Sign in error %@", errorString);
 #endif
-            failureBlock();
+            if (failureBlock != nil) failureBlock();
         }
     }];
     
@@ -50,13 +50,13 @@
 {
     [PFAnonymousUtils logInWithBlock:^(PFUser *user, NSError *error) {
         if (error) {
-            failureBlock();
+            if (failureBlock != nil) failureBlock();
             #ifdef DEBUG_BWCPARSEMANAGER
             NSLog(@"Anonymous login failed.");
 #endif
         }
         else {
-            completionBlock();
+            if (completionBlock != nil) completionBlock();
             #ifdef DEBUG_BWCPARSEMANAGER
             NSLog(@"Anonymous user logged in.");
 #endif
@@ -76,13 +76,13 @@
 #ifdef DEBUG_BWCPARSEMANAGER
                                             NSLog(@"Successfully logged in user");
 #endif
-                                            completionBlock();
+                                            if (completionBlock != nil) completionBlock();
                                         }
                                         else {
 #ifdef DEBUG_BWCPARSEMANAGER
                                             NSLog(@"Failed to login user");
 #endif
-                                            failureBlock();
+                                            if (failureBlock != nil) failureBlock();
                                         }
                                     }];
 
@@ -99,14 +99,14 @@
 #ifdef DEBUG_BWCPARSEMANAGER
             NSLog(@"Successfully deleted user");
 #endif
-            completionBlock();
+            if (completionBlock != nil) completionBlock();
         }
         else
         {
 #ifdef DEBUG_BWCPARSEMANAGER
             NSLog(@"Failed to delete user");
 #endif
-            failureBlock();
+            if (failureBlock != nil) failureBlock();
         }
         
     }];
@@ -120,27 +120,30 @@
 #pragma mark - Sound samples
 -(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
 {
+
+    PFGeoPoint *location = [PFGeoPoint geoPointWithLatitude:[sample sampleLocation].coordinate.latitude longitude:[sample sampleLocation].coordinate.longitude];
+    
     PFObject *soundSample = [PFObject objectWithClassName:@"BWCSoundSample"];
     [soundSample setObject:[NSNumber numberWithFloat:sample.soundLevel] forKey:@"soundLevel"];
-    [soundSample setObject:[[sample sampleLocation] dictionaryRepresentation] forKey:@"sampleLocation"];
+    [soundSample setObject:location forKey:@"location"];
     [soundSample setObject:[sample sampleDate] forKey:@"sampleDate"];
     [soundSample setObject:[sample tags] forKey:@"tags"];
     [soundSample setObject:[sample soundQuote] forKey:@"soundQuote"];
-    [soundSample saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error)
+    [soundSample saveEventually:^(BOOL succeeded, NSError *error)
                                             {
                                                 if (succeeded)
                                                 {
 #ifdef DEBUG_BWCPARSEMANAGER
                                                     NSLog(@"Sample upload succeeded");
 #endif
-                                                    completionBlock();
+                                                    if (completionBlock != nil) completionBlock();
                                                 }
                                                 else
                                                 {
 #ifdef DEBUG_BWCPARSEMANAGER
                                                     NSLog(@"Sample upload failed");
 #endif
-                                                    failureBlock();
+                                                    if (failureBlock != nil) failureBlock();
                                                 }
                                             }];
 }

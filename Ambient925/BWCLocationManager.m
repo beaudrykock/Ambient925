@@ -17,6 +17,7 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[BWCLocationManager alloc] init];
         [sharedInstance startStandardUpdates];
+        
     });
     return sharedInstance;
 }

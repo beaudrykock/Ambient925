@@ -19,10 +19,10 @@
     [BWCUtilities registerForGoogleAnalytics];
     [BWCUtilities launchCloud];
     
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    //self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
+    //self.window.backgroundColor = [UIColor whiteColor];
+    //[self.window makeKeyAndVisible];
     
     if ([BWCUtilities appUpgradeAvailable] && [BWCUtilities upgradeCheckAvailable])
     {

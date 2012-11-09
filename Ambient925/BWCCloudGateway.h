@@ -16,11 +16,6 @@
 }
 
 @property (nonatomic, retain) BWCCloudManager *cloudManager;
-@property (nonatomic) NSTimeInterval sampleUploadInterval;
-@property (nonatomic, retain) NSMutableArray *sampleUploadQueue;
-@property (nonatomic, retain) NSTimer *sampleUploadTimer;
-@property (nonatomic) BOOL uploading;
-@property (nonatomic) BOOL uploadingPaused;
 
 +(BWCCloudGateway*) sharedInstance;
 
@@ -35,9 +30,7 @@
 // checkins
 -(void)newCheckInWithLocation:(CLLocation*)loc andTags:(NSArray*)tags andComment:(NSString*)comment toSocialChannels:(NSArray*)channels;
 
-// Methods unique to BWCCloudGateway
--(void)queueSampleForUpload:(BWCSoundSample*)sample;
--(void)pauseUploads;
--(void)resumeUploads;
+// sampling
+-(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
 
 @end
