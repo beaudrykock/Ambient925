@@ -10,6 +10,7 @@
 #import "BWCCloudGateway.h"
 #import "BWCSoundSample.h"
 #import "BWCLocationManager.h"
+#import "BWCSoundSampler.h"
 
 @interface BWCSoundBoxViewController : UIViewController
 {}

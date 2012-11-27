@@ -121,14 +121,16 @@
 -(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
 {
 
-    PFGeoPoint *location = [PFGeoPoint geoPointWithLatitude:[sample sampleLocation].coordinate.latitude longitude:[sample sampleLocation].coordinate.longitude];
+    PFGeoPoint *location = [PFGeoPoint geoPointWithLatitude:[sample.latitude floatValue] longitude:[sample.longitude floatValue]];
     
     PFObject *soundSample = [PFObject objectWithClassName:@"BWCSoundSample"];
-    [soundSample setObject:[NSNumber numberWithFloat:sample.soundLevel] forKey:@"soundLevel"];
-    [soundSample setObject:location forKey:@"location"];
-    [soundSample setObject:[sample sampleDate] forKey:@"sampleDate"];
-    [soundSample setObject:[sample tags] forKey:@"tags"];
-    [soundSample setObject:[sample soundQuote] forKey:@"soundQuote"];
+    [soundSample setObject: sample.averageSoundLevel forKey:@"averageSoundLevel"];
+    [soundSample setObject: sample.peakSoundLevel forKey:@"peakSoundLevel"];
+    [soundSample setObject: sample.interval forKey:@"interval"];
+    [soundSample setObject: location forKey:@"location"];
+    [soundSample setObject: sample.date forKey:@"date"];
+    [soundSample setObject: [sample tags] forKey:@"tags"];
+    [soundSample setObject: [sample quotes] forKey:@"quotes"];
     [soundSample saveEventually:^(BOOL succeeded, NSError *error)
                                             {
                                                 if (succeeded)

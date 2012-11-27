@@ -38,6 +38,10 @@
     [self testCheckIn];
 #endif
     
+#ifdef TEST_SOUNDSAMPLING
+    [self testSoundSampling];
+#endif
+    
 #endif
 }
 
@@ -51,20 +55,17 @@
 // creates and queues a sample
 -(void)testSampling
 {
-    NSLog(@"Creating and queueing a new sample");
-    BWCSoundSample *newSample = [[BWCSoundSample alloc] init];
-    [newSample setSampleDate:[NSDate date]];
-    [newSample setSoundLevel:arc4random_uniform(10)*1.0];
-    [newSample setSampleLocation:[[BWCLocationManager sharedInstance] currentLocation]];
-    [newSample setSoundQuote:@"Monastery"];
-    [newSample setTags:[NSArray arrayWithObjects:@"1", @"2", nil]];
-    [[BWCCloudGateway sharedInstance] uploadSample:newSample withCompletion:nil andFailure:nil];
-    
+    // DEPRECATED
 }
 
 -(void)testCheckIn
 {
     [[BWCCloudGateway sharedInstance] newCheckInWithTags:[NSArray arrayWithObjects:@"home", nil] andComment:@"Loud!"];
+}
+
+-(void)testSoundSampling
+{
+    [BWCSoundSampler sharedInstance];
 }
 
 @end

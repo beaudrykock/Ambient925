@@ -17,8 +17,12 @@
 		9F44132C163D9F4400F3C645 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132B163D9F4400F3C645 /* Default.png */; };
 		9F44132E163D9F4400F3C645 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132D163D9F4400F3C645 /* Default@2x.png */; };
 		9F441330163D9F4400F3C645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132F163D9F4400F3C645 /* Default-568h@2x.png */; };
-		9F441333163D9F4400F3C645 /* Ambient925.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */; };
 		9F5AAB5B1664CB5100E18D94 /* BWCSoundSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */; };
+		9F5AAB7A1664CF3100E18D94 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5AAB791664CF3100E18D94 /* AVFoundation.framework */; };
+		9F5AAB8E1665088400E18D94 /* BWCSoundSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB8D1665088400E18D94 /* BWCSoundSample.m */; };
+		9F5AAB911665089600E18D94 /* BWCSoundTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB901665089600E18D94 /* BWCSoundTag.m */; };
+		9F5AAB94166508D400E18D94 /* BWCSoundQuote.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB93166508D400E18D94 /* BWCSoundQuote.m */; };
+		9F5AAB9B166518C500E18D94 /* SampleDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB99166518C400E18D94 /* SampleDataModel.xcdatamodeld */; };
 		9F5B7C9A164BEAC000C6ED8A /* BWCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */; };
 		9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */; };
 		9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CB0164BF1BB00C6ED8A /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -41,7 +45,6 @@
 		9F5B7D05164C29F200C6ED8A /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */; };
 		9F5B7D07164C29F700C6ED8A /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D06164C29F700C6ED8A /* StoreKit.framework */; };
 		9F5B7D09164C2A3000C6ED8A /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */; };
-		9F622F3C164D19F200D3ABC6 /* BWCSoundSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */; };
 		9F622F41164D204700D3ABC6 /* BWCCloudGateway.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */; };
 		9F622F47164D2AC000D3ABC6 /* CLLocation+NSDictionary.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F44164D2AC000D3ABC6 /* CLLocation+NSDictionary.m */; };
 		9F622F95164D5B6300D3ABC6 /* AFHTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622F4E164D5B6200D3ABC6 /* AFHTTPClient.m */; };
@@ -75,9 +78,16 @@
 		9F44132B163D9F4400F3C645 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		9F44132D163D9F4400F3C645 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9F44132F163D9F4400F3C645 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		9F441332163D9F4400F3C645 /* Ambient925.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ambient925.xcdatamodel; sourceTree = "<group>"; };
 		9F5AAB591664CB5100E18D94 /* BWCSoundSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundSampler.h; sourceTree = "<group>"; };
 		9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundSampler.m; sourceTree = "<group>"; };
+		9F5AAB791664CF3100E18D94 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9F5AAB8C1665088400E18D94 /* BWCSoundSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCSoundSample.h; path = ../BWCSoundSample.h; sourceTree = "<group>"; };
+		9F5AAB8D1665088400E18D94 /* BWCSoundSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCSoundSample.m; path = ../BWCSoundSample.m; sourceTree = "<group>"; };
+		9F5AAB8F1665089500E18D94 /* BWCSoundTag.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundTag.h; sourceTree = "<group>"; };
+		9F5AAB901665089600E18D94 /* BWCSoundTag.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundTag.m; sourceTree = "<group>"; };
+		9F5AAB92166508D400E18D94 /* BWCSoundQuote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundQuote.h; sourceTree = "<group>"; };
+		9F5AAB93166508D400E18D94 /* BWCSoundQuote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundQuote.m; sourceTree = "<group>"; };
+		9F5AAB9A166518C500E18D94 /* SampleDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleDataModel.xcdatamodel; sourceTree = "<group>"; };
 		9F5B7C98164BEAC000C6ED8A /* BWCUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCUtilities.h; path = Ambient925/BWCUtilities.h; sourceTree = "<group>"; };
 		9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCUtilities.m; path = Ambient925/BWCUtilities.m; sourceTree = "<group>"; };
 		9F5B7CA1164BEB2B00C6ED8A /* BWCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCDefines.h; path = Ambient925/BWCDefines.h; sourceTree = "<group>"; };
@@ -114,8 +124,6 @@
 		9F5B7D04164C29F200C6ED8A /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		9F5B7D06164C29F700C6ED8A /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
-		9F622F3A164D19F200D3ABC6 /* BWCSoundSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundSample.h; sourceTree = "<group>"; };
-		9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundSample.m; sourceTree = "<group>"; };
 		9F622F3F164D204700D3ABC6 /* BWCCloudGateway.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCloudGateway.h; sourceTree = "<group>"; };
 		9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCloudGateway.m; sourceTree = "<group>"; };
 		9F622F43164D2AC000D3ABC6 /* CLLocation+NSDictionary.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CLLocation+NSDictionary.h"; sourceTree = "<group>"; };
@@ -154,6 +162,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F5AAB7A1664CF3100E18D94 /* AVFoundation.framework in Frameworks */,
 				9F5B7D05164C29F200C6ED8A /* MobileCoreServices.framework in Frameworks */,
 				9F5B7D09164C2A3000C6ED8A /* AdSupport.framework in Frameworks */,
 				9F5B7D07164C29F700C6ED8A /* StoreKit.framework in Frameworks */,
@@ -199,6 +208,7 @@
 		9F441316163D9F4300F3C645 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F5AAB791664CF3100E18D94 /* AVFoundation.framework */,
 				9F623026164D885800D3ABC6 /* FacebookSDK.framework */,
 				9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */,
 				9F5B7D06164C29F700C6ED8A /* StoreKit.framework */,
@@ -230,7 +240,6 @@
 				9F622FC9164D6BC600D3ABC6 /* View Controllers */,
 				9F622F3E164D19F600D3ABC6 /* Models */,
 				9F5B7CCC164C079C00C6ED8A /* Helpers */,
-				9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */,
 				9F5B7C9C164BEAC400C6ED8A /* Utilities */,
 				9F441320163D9F4400F3C645 /* Supporting Files */,
 			);
@@ -331,12 +340,17 @@
 		9F622F3E164D19F600D3ABC6 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				9F622F3A164D19F200D3ABC6 /* BWCSoundSample.h */,
-				9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */,
+				9F5AAB8C1665088400E18D94 /* BWCSoundSample.h */,
+				9F5AAB8D1665088400E18D94 /* BWCSoundSample.m */,
+				9F5AAB92166508D400E18D94 /* BWCSoundQuote.h */,
+				9F5AAB93166508D400E18D94 /* BWCSoundQuote.m */,
 				9F622F3F164D204700D3ABC6 /* BWCCloudGateway.h */,
 				9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */,
 				9F5AAB591664CB5100E18D94 /* BWCSoundSampler.h */,
 				9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */,
+				9F5AAB8F1665089500E18D94 /* BWCSoundTag.h */,
+				9F5AAB901665089600E18D94 /* BWCSoundTag.m */,
+				9F5AAB99166518C400E18D94 /* SampleDataModel.xcdatamodeld */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -457,7 +471,6 @@
 			files = (
 				9F441326163D9F4400F3C645 /* main.m in Sources */,
 				9F44132A163D9F4400F3C645 /* BWCAppDelegate.m in Sources */,
-				9F441333163D9F4400F3C645 /* Ambient925.xcdatamodeld in Sources */,
 				9F5B7C9A164BEAC000C6ED8A /* BWCUtilities.m in Sources */,
 				9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */,
 				9F5B7CB6164BF2B400C6ED8A /* JSONKit.m in Sources */,
@@ -466,7 +479,6 @@
 				9F5B7CE0164C1AAA00C6ED8A /* BWCParseManager.m in Sources */,
 				9F5B7CEF164C1F6900C6ED8A /* PDKeychainBindings.m in Sources */,
 				9F5B7CF0164C1F6900C6ED8A /* PDKeychainBindingsController.m in Sources */,
-				9F622F3C164D19F200D3ABC6 /* BWCSoundSample.m in Sources */,
 				9F622F41164D204700D3ABC6 /* BWCCloudGateway.m in Sources */,
 				9F622F47164D2AC000D3ABC6 /* CLLocation+NSDictionary.m in Sources */,
 				9F622F95164D5B6300D3ABC6 /* AFHTTPClient.m in Sources */,
@@ -482,6 +494,10 @@
 				9F622FC8164D6BC100D3ABC6 /* BWCSoundBoxViewController.m in Sources */,
 				9F623024164D86D300D3ABC6 /* BWCCheckInManager.m in Sources */,
 				9F5AAB5B1664CB5100E18D94 /* BWCSoundSampler.m in Sources */,
+				9F5AAB8E1665088400E18D94 /* BWCSoundSample.m in Sources */,
+				9F5AAB911665089600E18D94 /* BWCSoundTag.m in Sources */,
+				9F5AAB94166508D400E18D94 /* BWCSoundQuote.m in Sources */,
+				9F5AAB9B166518C500E18D94 /* SampleDataModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -615,13 +631,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */ = {
+		9F5AAB99166518C400E18D94 /* SampleDataModel.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				9F441332163D9F4400F3C645 /* Ambient925.xcdatamodel */,
+				9F5AAB9A166518C500E18D94 /* SampleDataModel.xcdatamodel */,
 			);
-			currentVersion = 9F441332163D9F4400F3C645 /* Ambient925.xcdatamodel */;
-			path = Ambient925.xcdatamodeld;
+			currentVersion = 9F5AAB9A166518C500E18D94 /* SampleDataModel.xcdatamodel */;
+			path = SampleDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

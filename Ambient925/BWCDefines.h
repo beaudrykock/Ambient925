@@ -5,6 +5,14 @@
 //  Created by Beaudry Kock on 11/8/12.
 //  Copyright (c) 2012 Better World Coding. All rights reserved.
 //
+// DEBUGGING
+#define TESTING 1
+//#define TEST_SAMPLE_UPLOAD 1
+#define TEST_CHECKIN 1
+#define TEST_SOUNDSAMPLING 1
+
+#define DEBUG_BWCPARSEMANAGER
+#define DEBUG_BWCCLOUDGATEWAY
 
 // UTILITIES
 #define kGoogleAnalyticsTrackingID @"UA-35216488-2"
@@ -32,10 +40,5 @@
 #define kTwitterSharing @"share_twitter"
 #define kFourSquareSharing @"share_foursquare"
 
-// DEBUGGING
-#define TESTING 1
-//#define TEST_SAMPLE_UPLOAD 1
-#define TEST_CHECKIN 1
-
-#define DEBUG_BWCPARSEMANAGER
-#define DEBUG_BWCCLOUDGATEWAY
+// COREDATA
+#define kDataModelName @"SampleDataModel"
