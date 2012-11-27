@@ -33,7 +33,7 @@
 }
 
 #pragma mark - Sampling methods (PUBLIC)
--(void)uploadSample:(BWCParseSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
+-(void)uploadSample:(BWCSampleForUpload*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
 {
     [self.cloudManager uploadSample:sample withCompletion:completionBlock andFailure:failureBlock];
 }

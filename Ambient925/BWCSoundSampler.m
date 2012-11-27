@@ -106,6 +106,49 @@
     }
 }
 
+- (BWCSampleForUpload*)snapshot
+{
+    float average = [self.sampler averagePowerForChannel:0];
+    float peak = [self.sampler peakPowerForChannel:0];
+    
+    BWCSampleForUpload* sample = [[BWCSampleForUpload alloc] init];
+    
+    sample.averageSoundLevel = [NSNumber numberWithFloat:average];
+    sample.peakSoundLevel = [NSNumber numberWithFloat:peak];
+    sample.date = [NSDate date];
+    sample.interval = [NSNumber numberWithFloat:kSamplingInterval];
+    sample.longitude = [NSNumber numberWithFloat:[[BWCLocationManager sharedInstance] currentLocation].coordinate.longitude];
+    sample.latitude = [NSNumber numberWithFloat:[[BWCLocationManager sharedInstance] currentLocation].coordinate.latitude];
+    sample.quotes = [NSSet setWithArray:[self getQuotesForAverageLevel:average]];
+    return sample;
+}
+
+//
+// Method for converting a BWCSampleForUpload into a BWCSoundSample and storing in the Core Data model
+// e.g. when BWCCheckInManager needs to store a snapshot it took for a check in
+//
+//
+-(void)storeUploadSample:(BWCSampleForUpload*)sample
+{
+    NSManagedObjectContext *context = [self managedObjectContext];
+    
+    BWCSoundSample *soundSample = [NSEntityDescription insertNewObjectForEntityForName:@"BWCSoundSample" inManagedObjectContext:context];
+    
+    soundSample.averageSoundLevel = sample.averageSoundLevel;
+    soundSample.peakSoundLevel = sample.peakSoundLevel;
+    soundSample.interval = sample.interval;
+    soundSample.date = sample.date;
+    soundSample.longitude = sample.longitude;
+    soundSample.latitude = sample.latitude;
+    soundSample.quotes = sample.quotes;
+    soundSample.tags = sample.tags;
+    
+    NSError *error;
+    if (![context save:&error]) {
+        NSLog(@"Failed to save with error = %@", [error description]);
+    }
+}
+
 /*
  * 1. Queries all BWCSoundSample objects added in the last X seconds (depending on the kSampleUploadInterval)
  * 2. Calculates average sound level and peak sound level for all those samples
@@ -128,7 +171,7 @@
     
     NSArray *fetchedObjects = [[self managedObjectContext] executeFetchRequest:fetchRequest error:&error];
     
-    BWCParseSample *aggregateSample = [[BWCParseSample alloc] init];
+    BWCSampleForUpload *aggregateSample = [[BWCSampleForUpload alloc] init];
     
     float averageLevel;
     

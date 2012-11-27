@@ -13,10 +13,11 @@
  */
 
 #import <Foundation/Foundation.h>
+#import "BWCSampleForUpload.h"
 
 @interface BWCCheckInManager : NSObject
 
 // PUBLIC
--(void)checkInWithChannels:(NSArray*)channels;
+-(void)checkInSample:(BWCSampleForUpload*)sample overChannels:(NSArray*)channels withTags:(NSMutableArray *)tags andComment:(NSString*)string;
 
 @end

@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Better World Coding. All rights reserved.
 //
 
-#import "BWCParseSample.h"
+#import "BWCSampleForUpload.h"
 
-@implementation BWCParseSample
+@implementation BWCSampleForUpload
 
 -(NSString*)description
 {

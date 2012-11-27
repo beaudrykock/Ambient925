@@ -13,7 +13,7 @@
 #import "BWCSoundTag.h"
 #import "BWCLocationManager.h"
 #import "BWCCloudGateway.h"
-#import "BWCParseSample.h"
+#import "BWCSampleForUpload.h"
 
 @interface BWCSoundSampler : NSObject <AVAudioRecorderDelegate>
 {
@@ -30,5 +30,6 @@
 - (void)levelTimerCallback:(NSTimer *)timer;
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
-
+- (BWCSampleForUpload*)snapshot;
+-(void)storeUploadSample:(BWCSampleForUpload*)sample;
 @end

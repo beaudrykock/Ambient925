@@ -28,10 +28,7 @@
 -(void)deleteLoggedInUserWithCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
 -(void)logoutLoggedInUser;
 
-// checkins
--(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment;
-
 // sampling
--(void)uploadSample:(BWCParseSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
+-(void)uploadSample:(BWCSampleForUpload*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
 
 @end

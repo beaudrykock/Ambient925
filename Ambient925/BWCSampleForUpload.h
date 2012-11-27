@@ -15,7 +15,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface BWCParseSample : NSObject
+@interface BWCSampleForUpload : NSObject
 
 @property (nonatomic, retain) NSNumber * averageSoundLevel;
 @property (nonatomic, retain) NSNumber * peakSoundLevel;
