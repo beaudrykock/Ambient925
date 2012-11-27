@@ -118,19 +118,25 @@
 }
 
 #pragma mark - Sound samples
--(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
+-(void)uploadSample:(BWCParseSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock
 {
 
+    NSLog(@"description: %@", [sample description]);
+    
     PFGeoPoint *location = [PFGeoPoint geoPointWithLatitude:[sample.latitude floatValue] longitude:[sample.longitude floatValue]];
     
-    PFObject *soundSample = [PFObject objectWithClassName:@"BWCSoundSample"];
+    PFObject *soundSample = [PFObject objectWithClassName:@"BWCParseSample"];
     [soundSample setObject: sample.averageSoundLevel forKey:@"averageSoundLevel"];
     [soundSample setObject: sample.peakSoundLevel forKey:@"peakSoundLevel"];
     [soundSample setObject: sample.interval forKey:@"interval"];
     [soundSample setObject: location forKey:@"location"];
     [soundSample setObject: sample.date forKey:@"date"];
-    [soundSample setObject: [sample tags] forKey:@"tags"];
-    [soundSample setObject: [sample quotes] forKey:@"quotes"];
+    
+    if ([[sample tags] count]>0)
+        [soundSample setObject: [sample tags] forKey:@"tags"];
+    if ([[sample quotes] count]>0)
+        [soundSample setObject: [sample quotes] forKey:@"quotes"];
+    
     [soundSample saveEventually:^(BOOL succeeded, NSError *error)
                                             {
                                                 if (succeeded)
@@ -157,14 +163,14 @@
 -(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment
 {
     // 1. retrieve most recent object
-    PFQuery *query = [PFQuery queryWithClassName:@"BWCSoundSample"];
-    [query orderByAscending:@"sampleDate"];
+    PFQuery *query = [PFQuery queryWithClassName:@"BWCParseSample"];
+    [query orderByAscending:@"date"];
     
     NSArray *objects = [query findObjects];
     
     PFObject *obj = [objects objectAtIndex:0];
     
-    NSDate *date = (NSDate*)[obj objectForKey:@"sampleDate"];
+    NSDate *date = (NSDate*)[obj objectForKey:@"date"];
     NSLog(@"obj date created = %@", [date description]);
     
     // 2. add tag objects with SoundSample as parent

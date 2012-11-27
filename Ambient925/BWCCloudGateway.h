@@ -10,6 +10,7 @@
 #import "BWCCloudManager.h"
 #import "BWCParseManager.h"
 
+
 @interface BWCCloudGateway : NSObject
 {
     
@@ -31,6 +32,6 @@
 -(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment;
 
 // sampling
--(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
+-(void)uploadSample:(BWCParseSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
 
 @end

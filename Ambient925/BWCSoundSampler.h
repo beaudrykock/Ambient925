@@ -12,6 +12,8 @@
 #import "BWCSoundQuote.h"
 #import "BWCSoundTag.h"
 #import "BWCLocationManager.h"
+#import "BWCCloudGateway.h"
+#import "BWCParseSample.h"
 
 @interface BWCSoundSampler : NSObject <AVAudioRecorderDelegate>
 {

@@ -8,7 +8,7 @@
 // DEBUGGING
 #define TESTING 1
 //#define TEST_SAMPLE_UPLOAD 1
-#define TEST_CHECKIN 1
+//#define TEST_CHECKIN 1
 #define TEST_SOUNDSAMPLING 1
 
 #define DEBUG_BWCPARSEMANAGER
@@ -26,9 +26,12 @@
 // SAMPLING
 #ifdef TESTING
     #define kSamplingInterval 1.0 // time interval between sound samples
+    #define kSampleUploadInterval 60.0
 #else
     #define kSamplingInterval 60.0 // time interval between sound samples
+    #define kSampleUploadInterval 900.0
 #endif
+#define kUP_lastSampleUploadDate @"lastSampleUploadDate"
 
 // AFNetworking notifications
 #define kInternetNotReachable @"internetNotReachable"

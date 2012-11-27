@@ -16,5 +16,7 @@
 +(void)muteUpgradeCheck;
 +(BOOL)upgradeCheckAvailable;
 +(void)launchCloud;
++(BOOL)sampleUploadIntervalExceeded;
++(void)sampleUploaded;
 
 @end

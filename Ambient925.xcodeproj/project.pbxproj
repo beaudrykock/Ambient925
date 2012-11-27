@@ -23,6 +23,7 @@
 		9F5AAB911665089600E18D94 /* BWCSoundTag.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB901665089600E18D94 /* BWCSoundTag.m */; };
 		9F5AAB94166508D400E18D94 /* BWCSoundQuote.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB93166508D400E18D94 /* BWCSoundQuote.m */; };
 		9F5AAB9B166518C500E18D94 /* SampleDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB99166518C400E18D94 /* SampleDataModel.xcdatamodeld */; };
+		9F5AAB9E16652C4400E18D94 /* BWCParseSample.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB9D16652C4400E18D94 /* BWCParseSample.m */; };
 		9F5B7C9A164BEAC000C6ED8A /* BWCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */; };
 		9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */; };
 		9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CB0164BF1BB00C6ED8A /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -88,6 +89,8 @@
 		9F5AAB92166508D400E18D94 /* BWCSoundQuote.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundQuote.h; sourceTree = "<group>"; };
 		9F5AAB93166508D400E18D94 /* BWCSoundQuote.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundQuote.m; sourceTree = "<group>"; };
 		9F5AAB9A166518C500E18D94 /* SampleDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SampleDataModel.xcdatamodel; sourceTree = "<group>"; };
+		9F5AAB9C16652C4400E18D94 /* BWCParseSample.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCParseSample.h; sourceTree = "<group>"; };
+		9F5AAB9D16652C4400E18D94 /* BWCParseSample.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCParseSample.m; sourceTree = "<group>"; };
 		9F5B7C98164BEAC000C6ED8A /* BWCUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCUtilities.h; path = Ambient925/BWCUtilities.h; sourceTree = "<group>"; };
 		9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCUtilities.m; path = Ambient925/BWCUtilities.m; sourceTree = "<group>"; };
 		9F5B7CA1164BEB2B00C6ED8A /* BWCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCDefines.h; path = Ambient925/BWCDefines.h; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 				9F5B7CDF164C1AAA00C6ED8A /* BWCParseManager.m */,
 				9F623022164D86D300D3ABC6 /* BWCCheckInManager.h */,
 				9F623023164D86D300D3ABC6 /* BWCCheckInManager.m */,
+				9F5AAB591664CB5100E18D94 /* BWCSoundSampler.h */,
+				9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -342,12 +347,12 @@
 			children = (
 				9F5AAB8C1665088400E18D94 /* BWCSoundSample.h */,
 				9F5AAB8D1665088400E18D94 /* BWCSoundSample.m */,
+				9F5AAB9C16652C4400E18D94 /* BWCParseSample.h */,
+				9F5AAB9D16652C4400E18D94 /* BWCParseSample.m */,
 				9F5AAB92166508D400E18D94 /* BWCSoundQuote.h */,
 				9F5AAB93166508D400E18D94 /* BWCSoundQuote.m */,
 				9F622F3F164D204700D3ABC6 /* BWCCloudGateway.h */,
 				9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */,
-				9F5AAB591664CB5100E18D94 /* BWCSoundSampler.h */,
-				9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */,
 				9F5AAB8F1665089500E18D94 /* BWCSoundTag.h */,
 				9F5AAB901665089600E18D94 /* BWCSoundTag.m */,
 				9F5AAB99166518C400E18D94 /* SampleDataModel.xcdatamodeld */,
@@ -498,6 +503,7 @@
 				9F5AAB911665089600E18D94 /* BWCSoundTag.m in Sources */,
 				9F5AAB94166508D400E18D94 /* BWCSoundQuote.m in Sources */,
 				9F5AAB9B166518C500E18D94 /* SampleDataModel.xcdatamodeld in Sources */,
+				9F5AAB9E16652C4400E18D94 /* BWCParseSample.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

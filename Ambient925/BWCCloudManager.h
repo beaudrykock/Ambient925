@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BWCSoundSample.h"
+#import "BWCParseSample.h"
 
 @class CLLocation;
 
@@ -25,6 +25,6 @@
 -(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment;
 
 // samples
--(void)uploadSample:(BWCSoundSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
+-(void)uploadSample:(BWCParseSample*)sample withCompletion:(void (^)(void))completionBlock andFailure:(void (^)(void))failureBlock;
 
 @end

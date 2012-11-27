@@ -13,6 +13,33 @@
 
 @implementation BWCUtilities
 
++(BOOL)sampleUploadIntervalExceeded
+{
+    NSDate *date = [[NSUserDefaults standardUserDefaults] objectForKey:kUP_lastSampleUploadDate];
+    
+    if (date==NULL)
+    {
+        return YES;
+    }
+    else
+    {
+        NSDate *now = [NSDate date];
+        if (abs([now timeIntervalSinceReferenceDate]-[date timeIntervalSinceReferenceDate])>kSampleUploadInterval)
+        {
+            return YES;
+        }
+        else
+        {
+            return NO;
+        }
+    }
+}
+
++(void)sampleUploaded
+{
+    [[NSUserDefaults standardUserDefaults] setObject:[NSDate date] forKey:kUP_lastSampleUploadDate];
+}
+
 +(BOOL)upgradeCheckAvailable
 {
     return [[NSUserDefaults standardUserDefaults] boolForKey:kUD_upgradeCheck];

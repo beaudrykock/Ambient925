@@ -26,6 +26,10 @@
 	<true/>
 	<key>NSLocationUsageDescription</key>
 	<string>Ambient925 needs your location to add to any ambient noise samples you generate</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>audio</string>
+	</array>
 	<key>UIMainStoryboardFile</key>
 	<string>MainStoryboard</string>
 	<key>UIRequiredDeviceCapabilities</key>
