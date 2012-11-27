@@ -18,6 +18,7 @@
 		9F44132E163D9F4400F3C645 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132D163D9F4400F3C645 /* Default@2x.png */; };
 		9F441330163D9F4400F3C645 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9F44132F163D9F4400F3C645 /* Default-568h@2x.png */; };
 		9F441333163D9F4400F3C645 /* Ambient925.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9F441331163D9F4400F3C645 /* Ambient925.xcdatamodeld */; };
+		9F5AAB5B1664CB5100E18D94 /* BWCSoundSampler.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */; };
 		9F5B7C9A164BEAC000C6ED8A /* BWCUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */; };
 		9F5B7CAD164BEBBB00C6ED8A /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5B7CAC164BEBBB00C6ED8A /* libz.dylib */; };
 		9F5B7CB2164BF1BB00C6ED8A /* OpenUDID.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F5B7CB0164BF1BB00C6ED8A /* OpenUDID.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
@@ -75,6 +76,8 @@
 		9F44132D163D9F4400F3C645 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9F44132F163D9F4400F3C645 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		9F441332163D9F4400F3C645 /* Ambient925.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Ambient925.xcdatamodel; sourceTree = "<group>"; };
+		9F5AAB591664CB5100E18D94 /* BWCSoundSampler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCSoundSampler.h; sourceTree = "<group>"; };
+		9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCSoundSampler.m; sourceTree = "<group>"; };
 		9F5B7C98164BEAC000C6ED8A /* BWCUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCUtilities.h; path = Ambient925/BWCUtilities.h; sourceTree = "<group>"; };
 		9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BWCUtilities.m; path = Ambient925/BWCUtilities.m; sourceTree = "<group>"; };
 		9F5B7CA1164BEB2B00C6ED8A /* BWCDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BWCDefines.h; path = Ambient925/BWCDefines.h; sourceTree = "<group>"; };
@@ -332,6 +335,8 @@
 				9F622F3B164D19F200D3ABC6 /* BWCSoundSample.m */,
 				9F622F3F164D204700D3ABC6 /* BWCCloudGateway.h */,
 				9F622F40164D204700D3ABC6 /* BWCCloudGateway.m */,
+				9F5AAB591664CB5100E18D94 /* BWCSoundSampler.h */,
+				9F5AAB5A1664CB5100E18D94 /* BWCSoundSampler.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 				9F622FBE164D5C4D00D3ABC6 /* BWCReachability.m in Sources */,
 				9F622FC8164D6BC100D3ABC6 /* BWCSoundBoxViewController.m in Sources */,
 				9F623024164D86D300D3ABC6 /* BWCCheckInManager.m in Sources */,
+				9F5AAB5B1664CB5100E18D94 /* BWCSoundSampler.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
