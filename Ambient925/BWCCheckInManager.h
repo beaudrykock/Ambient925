@@ -14,8 +14,12 @@
 
 #import <Foundation/Foundation.h>
 #import "BWCSampleForUpload.h"
+#import <Twitter/Twitter.h>
+#import <Accounts/Accounts.h>
 
 @interface BWCCheckInManager : NSObject
+
++(BWCCheckInManager*) sharedInstance;
 
 // PUBLIC
 -(void)checkInSample:(BWCSampleForUpload*)sample overChannels:(NSArray*)channels withTags:(NSMutableArray *)tags andComment:(NSString*)string;

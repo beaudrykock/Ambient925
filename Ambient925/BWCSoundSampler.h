@@ -25,6 +25,8 @@
 @property (readonly, nonatomic, strong) NSPersistentStoreCoordinator *persistentStoreCoordinator;
 @property (nonatomic, retain) AVAudioRecorder *sampler;
 @property (nonatomic, retain) NSTimer *sampleTimer;
+@property (nonatomic) float averageLevel;
+@property (nonatomic) float peakLevel;
 
 +(BWCSoundSampler*) sharedInstance;
 - (void)levelTimerCallback:(NSTimer *)timer;

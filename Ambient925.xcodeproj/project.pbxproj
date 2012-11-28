@@ -62,6 +62,10 @@
 		9F622FC8164D6BC100D3ABC6 /* BWCSoundBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622FC7164D6BC100D3ABC6 /* BWCSoundBoxViewController.m */; };
 		9F623024164D86D300D3ABC6 /* BWCCheckInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F623023164D86D300D3ABC6 /* BWCCheckInManager.m */; };
 		9F623027164D885800D3ABC6 /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F623026164D885800D3ABC6 /* FacebookSDK.framework */; };
+		9FA3A2AE166628DE00639D45 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FA3A2AB166628DE00639D45 /* FacebookSDKResources.bundle */; };
+		9FA3A2AF166628DE00639D45 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FA3A2AC166628DE00639D45 /* FBUserSettingsViewResources.bundle */; };
+		9FA3A2B0166628DE00639D45 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FA3A2AD166628DE00639D45 /* Info.plist */; };
+		9FA3A2B716663E4C00639D45 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3A2B616663E4C00639D45 /* Twitter.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -158,6 +162,10 @@
 		9F623022164D86D300D3ABC6 /* BWCCheckInManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCCheckInManager.h; sourceTree = "<group>"; };
 		9F623023164D86D300D3ABC6 /* BWCCheckInManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCCheckInManager.m; sourceTree = "<group>"; };
 		9F623026164D885800D3ABC6 /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		9FA3A2AB166628DE00639D45 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
+		9FA3A2AC166628DE00639D45 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
+		9FA3A2AD166628DE00639D45 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9FA3A2B616663E4C00639D45 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +173,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9FA3A2B716663E4C00639D45 /* Twitter.framework in Frameworks */,
 				9F5AAB7A1664CF3100E18D94 /* AVFoundation.framework in Frameworks */,
 				9F5B7D05164C29F200C6ED8A /* MobileCoreServices.framework in Frameworks */,
 				9F5B7D09164C2A3000C6ED8A /* AdSupport.framework in Frameworks */,
@@ -211,6 +220,8 @@
 		9F441316163D9F4300F3C645 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9FA3A2B616663E4C00639D45 /* Twitter.framework */,
+				9FA3A2AA166628DE00639D45 /* Resources */,
 				9F5AAB791664CF3100E18D94 /* AVFoundation.framework */,
 				9F623026164D885800D3ABC6 /* FacebookSDK.framework */,
 				9F5B7D08164C2A3000C6ED8A /* AdSupport.framework */,
@@ -407,6 +418,17 @@
 			name = "View Controllers";
 			sourceTree = "<group>";
 		};
+		9FA3A2AA166628DE00639D45 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9FA3A2AB166628DE00639D45 /* FacebookSDKResources.bundle */,
+				9FA3A2AC166628DE00639D45 /* FBUserSettingsViewResources.bundle */,
+				9FA3A2AD166628DE00639D45 /* Info.plist */,
+			);
+			name = Resources;
+			path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Resources;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -464,6 +486,9 @@
 				9F44132E163D9F4400F3C645 /* Default@2x.png in Resources */,
 				9F441330163D9F4400F3C645 /* Default-568h@2x.png in Resources */,
 				9F622FC4164D6B7B00D3ABC6 /* MainStoryboard.storyboard in Resources */,
+				9FA3A2AE166628DE00639D45 /* FacebookSDKResources.bundle in Resources */,
+				9FA3A2AF166628DE00639D45 /* FBUserSettingsViewResources.bundle in Resources */,
+				9FA3A2B0166628DE00639D45 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -588,6 +613,7 @@
 					"\"$(SRCROOT)/TestFlightSDK1\"",
 					"\"$(SRCROOT)/Library\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -608,6 +634,7 @@
 					"\"$(SRCROOT)/TestFlightSDK1\"",
 					"\"$(SRCROOT)/Library\"",
 				);
+				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};

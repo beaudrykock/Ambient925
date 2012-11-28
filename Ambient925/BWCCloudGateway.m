@@ -65,14 +65,4 @@
     [self.cloudManager logoutLoggedInUser];
 }
 
-// checkins
--(void)newCheckInWithTags:(NSArray*)tags andComment:(NSString*)comment
-{
-    [self.cloudManager newCheckInWithTags:tags andComment:comment];
-}
-
-// samples
-
-
-
 @end

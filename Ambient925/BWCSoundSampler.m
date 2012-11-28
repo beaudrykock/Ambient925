@@ -64,8 +64,8 @@
 - (void)levelTimerCallback:(NSTimer *)timer {
 	[self.sampler updateMeters];
     
-    float average = [self.sampler averagePowerForChannel:0];
-    float peak = [self.sampler peakPowerForChannel:0];
+    self.averageLevel = [self.sampler averagePowerForChannel:0];
+    self.peakLevel = [self.sampler peakPowerForChannel:0];
     
     //float average_linear = pow(10., 0.05 * average);
     //float peak_linear = pow(10., 0.05 * peak);;
@@ -76,14 +76,14 @@
     
     BWCSoundSample *sample = [NSEntityDescription insertNewObjectForEntityForName:@"BWCSoundSample" inManagedObjectContext:context];
     
-    sample.averageSoundLevel = [NSNumber numberWithFloat:(160-(average*-1))];
-    sample.peakSoundLevel = [NSNumber numberWithFloat:(160-(peak*-1))];
+    sample.averageSoundLevel = [NSNumber numberWithFloat:(160-(self.averageLevel*-1))];
+    sample.peakSoundLevel = [NSNumber numberWithFloat:(160-(self.peakLevel*-1))];
     sample.interval = [NSNumber numberWithLongLong:timer.timeInterval];
     sample.date = [NSDate date];
     sample.longitude = [NSNumber numberWithFloat:[[BWCLocationManager sharedInstance] currentLocation].coordinate.longitude];
     sample.latitude = [NSNumber numberWithFloat:[[BWCLocationManager sharedInstance] currentLocation].coordinate.latitude];
     
-    NSMutableArray *quotes = [self getQuotesForAverageLevel:average];
+    NSMutableArray *quotes = [self getQuotesForAverageLevel:self.averageLevel];
     for (NSString *quoteText in quotes)
     {
         BWCSoundQuote *quote = [NSEntityDescription insertNewObjectForEntityForName:@"BWCSoundQuote" inManagedObjectContext:context];
@@ -147,6 +147,9 @@
     if (![context save:&error]) {
         NSLog(@"Failed to save with error = %@", [error description]);
     }
+    
+    // also push to cloud
+    [[BWCCloudGateway sharedInstance] uploadSample:sample withCompletion:nil andFailure:nil];
 }
 
 /*

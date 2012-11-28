@@ -11,8 +11,12 @@
 #import "BWCSoundSample.h"
 #import "BWCLocationManager.h"
 #import "BWCSoundSampler.h"
+#import <FacebookSDK/FacebookSDK.h>
+#import "BWCAppDelegate.h"
+#import "BWCCheckInManager.h"
 
 @interface BWCSoundBoxViewController : UIViewController
 {}
+
 
 @end
