@@ -34,7 +34,7 @@
     #define kSamplingInterval 1.0 // time interval between sound samples
     #define kSampleUploadInterval 60.0
 #else
-    #define kSamplingInterval 60.0 // time interval between sound samples
+    #define kSamplingInterval 1.0 // time interval between sound samples
     #define kSampleUploadInterval 900.0
 #endif
 #define kUP_lastSampleUploadDate @"lastSampleUploadDate"

@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9F1A1EB01671FC1F0023CA7E /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F1A1EAF1671FC1F0023CA7E /* FacebookSDK.framework */; };
 		9F441318163D9F4400F3C645 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F441317163D9F4300F3C645 /* UIKit.framework */; };
 		9F44131A163D9F4400F3C645 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F441319163D9F4400F3C645 /* Foundation.framework */; };
 		9F44131C163D9F4400F3C645 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F44131B163D9F4400F3C645 /* CoreGraphics.framework */; };
@@ -62,13 +61,15 @@
 		9F622FC4164D6B7B00D3ABC6 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9F622FC3164D6B7B00D3ABC6 /* MainStoryboard.storyboard */; };
 		9F622FC8164D6BC100D3ABC6 /* BWCSoundBoxViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F622FC7164D6BC100D3ABC6 /* BWCSoundBoxViewController.m */; };
 		9F623024164D86D300D3ABC6 /* BWCCheckInManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9F623023164D86D300D3ABC6 /* BWCCheckInManager.m */; };
-		9FA3A2AE166628DE00639D45 /* FacebookSDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FA3A2AB166628DE00639D45 /* FacebookSDKResources.bundle */; };
-		9FA3A2AF166628DE00639D45 /* FBUserSettingsViewResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 9FA3A2AC166628DE00639D45 /* FBUserSettingsViewResources.bundle */; };
 		9FA3A2B716663E4C00639D45 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9FA3A2B616663E4C00639D45 /* Twitter.framework */; };
+		E46028931677C1AD00EBE07F /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E46028921677C1AD00EBE07F /* FacebookSDK.framework */; };
+		E475AD571682BB690033289A /* BWCRealtimePlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E475AD551682BB690033289A /* BWCRealtimePlotViewController.m */; };
+		E475AD581682BB690033289A /* BWCRealtimePlotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475AD561682BB690033289A /* BWCRealtimePlotViewController.xib */; };
+		E475AD5A1682BD0A0033289A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E475AD591682BD0A0033289A /* background.png */; };
+		E475AD661682CDCD0033289A /* F3PlotStrip.m in Sources */ = {isa = PBXBuildFile; fileRef = E475AD651682CDCD0033289A /* F3PlotStrip.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		9F1A1EAF1671FC1F0023CA7E /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FacebookSDK.framework; path = "../../Example code/FacebookSDK/FacebookSDK.framework"; sourceTree = "<group>"; };
 		9F441313163D9F4300F3C645 /* Ambient925.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Ambient925.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9F441317163D9F4300F3C645 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		9F441319163D9F4400F3C645 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -164,6 +165,13 @@
 		9FA3A2AB166628DE00639D45 /* FacebookSDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FacebookSDKResources.bundle; sourceTree = "<group>"; };
 		9FA3A2AC166628DE00639D45 /* FBUserSettingsViewResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = FBUserSettingsViewResources.bundle; sourceTree = "<group>"; };
 		9FA3A2B616663E4C00639D45 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = System/Library/Frameworks/Twitter.framework; sourceTree = SDKROOT; };
+		E46028921677C1AD00EBE07F /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		E475AD541682BB690033289A /* BWCRealtimePlotViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BWCRealtimePlotViewController.h; sourceTree = "<group>"; };
+		E475AD551682BB690033289A /* BWCRealtimePlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCRealtimePlotViewController.m; sourceTree = "<group>"; };
+		E475AD561682BB690033289A /* BWCRealtimePlotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCRealtimePlotViewController.xib; sourceTree = "<group>"; };
+		E475AD591682BD0A0033289A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		E475AD641682CDCD0033289A /* F3PlotStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3PlotStrip.h; sourceTree = "<group>"; };
+		E475AD651682CDCD0033289A /* F3PlotStrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3PlotStrip.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,7 +199,7 @@
 				9F44131E163D9F4400F3C645 /* CoreData.framework in Frameworks */,
 				9F5B7CC2164BF88F00C6ED8A /* libGoogleAnalytics.a in Frameworks */,
 				9F5B7CE6164C1BBD00C6ED8A /* Parse.framework in Frameworks */,
-				9F1A1EB01671FC1F0023CA7E /* FacebookSDK.framework in Frameworks */,
+				E46028931677C1AD00EBE07F /* FacebookSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +226,7 @@
 		9F441316163D9F4300F3C645 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9F1A1EAF1671FC1F0023CA7E /* FacebookSDK.framework */,
+				E46028921677C1AD00EBE07F /* FacebookSDK.framework */,
 				9FA3A2B616663E4C00639D45 /* Twitter.framework */,
 				9FA3A2AA166628DE00639D45 /* Resources */,
 				9F5AAB791664CF3100E18D94 /* AVFoundation.framework */,
@@ -261,6 +269,7 @@
 		9F441320163D9F4400F3C645 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E475AD591682BD0A0033289A /* background.png */,
 				9F441321163D9F4400F3C645 /* Ambient925-Info.plist */,
 				9F441322163D9F4400F3C645 /* InfoPlist.strings */,
 				9F441325163D9F4400F3C645 /* main.m */,
@@ -275,6 +284,7 @@
 		9F5B7C9C164BEAC400C6ED8A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				E475AD501682BA8E0033289A /* F3PlotStrip */,
 				9F622F4A164D5B6200D3ABC6 /* AFNetworking */,
 				9F622F42164D2AC000D3ABC6 /* CLLocation-NSDictionary */,
 				9F5B7CF1164C1F6E00C6ED8A /* PDKeyChainBindings */,
@@ -412,6 +422,9 @@
 			children = (
 				9F622FC6164D6BC100D3ABC6 /* BWCSoundBoxViewController.h */,
 				9F622FC7164D6BC100D3ABC6 /* BWCSoundBoxViewController.m */,
+				E475AD541682BB690033289A /* BWCRealtimePlotViewController.h */,
+				E475AD551682BB690033289A /* BWCRealtimePlotViewController.m */,
+				E475AD561682BB690033289A /* BWCRealtimePlotViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -424,6 +437,15 @@
 			);
 			name = Resources;
 			path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Resources;
+			sourceTree = "<group>";
+		};
+		E475AD501682BA8E0033289A /* F3PlotStrip */ = {
+			isa = PBXGroup;
+			children = (
+				E475AD641682CDCD0033289A /* F3PlotStrip.h */,
+				E475AD651682CDCD0033289A /* F3PlotStrip.m */,
+			);
+			name = F3PlotStrip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -483,8 +505,8 @@
 				9F44132E163D9F4400F3C645 /* Default@2x.png in Resources */,
 				9F441330163D9F4400F3C645 /* Default-568h@2x.png in Resources */,
 				9F622FC4164D6B7B00D3ABC6 /* MainStoryboard.storyboard in Resources */,
-				9FA3A2AE166628DE00639D45 /* FacebookSDKResources.bundle in Resources */,
-				9FA3A2AF166628DE00639D45 /* FBUserSettingsViewResources.bundle in Resources */,
+				E475AD581682BB690033289A /* BWCRealtimePlotViewController.xib in Resources */,
+				E475AD5A1682BD0A0033289A /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -525,6 +547,8 @@
 				9F5AAB94166508D400E18D94 /* BWCSoundQuote.m in Sources */,
 				9F5AAB9B166518C500E18D94 /* SampleDataModel.xcdatamodeld in Sources */,
 				9F5AAB9E16652C4400E18D94 /* BWCSampleForUpload.m in Sources */,
+				E475AD571682BB690033289A /* BWCRealtimePlotViewController.m in Sources */,
+				E475AD661682CDCD0033289A /* F3PlotStrip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

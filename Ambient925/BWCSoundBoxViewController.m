@@ -7,6 +7,7 @@
 //
 
 #import "BWCSoundBoxViewController.h"
+#import "BWCRealtimePlotViewController.h"
 
 @interface BWCSoundBoxViewController ()
 
@@ -47,6 +48,7 @@
 #endif
     
 #endif
+    [self addViewControllers];
 }
 
 - (void)didReceiveMemoryWarning
@@ -166,6 +168,21 @@
     [[BWCCheckInManager sharedInstance] checkInSample:sample overChannels:[NSArray arrayWithObject:kTwitterSharing] withTags:[NSArray arrayWithObject:@"testTag"] andComment:@"testComment"];
 }
 
+-(void)addViewControllers{
+ // old way for now - with segue
+    BWCRealtimePlotViewController  *realtimePlotViewController = [[BWCRealtimePlotViewController alloc] init];
+    
+    [self addChildViewController:realtimePlotViewController];
+    CGRect frame = realtimePlotViewController.view.frame;
+    
+    frame.origin.y = self.view.frame.origin.y+self.view.frame.size.height-100;
+    frame.origin.x = 0.0;
+    realtimePlotViewController.view.frame = frame;
+    
+    [self.view addSubview:realtimePlotViewController.view];
+    [realtimePlotViewController didMoveToParentViewController:self];
+    
+}
 
 
 @end
