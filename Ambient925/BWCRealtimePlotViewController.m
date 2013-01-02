@@ -60,7 +60,7 @@
     // Add current slider value to plot strip
     float soundValue = (160-([[BWCSoundSampler sharedInstance] peakLevel]*-1));
     
-    if(soundValue>130)
+    if(soundValue>100)
         plotStrip.lineColor = [UIColor redColor];
     else
         plotStrip.lineColor = [UIColor greenColor];
