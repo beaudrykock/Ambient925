@@ -1,0 +1,8 @@
+platform :ios, '7.0'
+pod 'AFNetworking', '~> 2.0.3'
+pod 'OpenUDID', '~> 1.0.0'
+pod 'GoogleAnalytics-iOS-SDK', '~> 3.0.2'
+pod 'PDKeychainBindingsController', '~> 0.0.1'
+pod 'EZAudio', '~> 0.0.2'
+pod 'iVersion', '~> 1.10.6'
+pod 'JSONKit', '~> 1.4'

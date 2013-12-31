@@ -9,7 +9,7 @@
 #import "BWCUtilities.h"
 #import "OpenUDID.h"
 #import "JSONKit.h"
-#import "GAI.h"
+
 
 @implementation BWCUtilities
 
@@ -81,13 +81,12 @@
 +(void)registerForGoogleAnalytics
 {
     // Optional: automatically track uncaught exceptions with Google Analytics.
-    [GAI sharedInstance].trackUncaughtExceptions = YES;
-    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
-    [GAI sharedInstance].dispatchInterval = 20;
-    // Optional: set debug to YES for extra debugging information.
-    [GAI sharedInstance].debug = YES;
-    // Create tracker instance.
-    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:kGoogleAnalyticsTrackingID]; 
+//    [GAI sharedInstance].trackUncaughtExceptions = YES;
+//    // Optional: set Google Analytics dispatch interval to e.g. 20 seconds.
+//    [GAI sharedInstance].dispatchInterval = 20;
+//    // Optional: set debug to YES for extra debugging information.
+//    // Create tracker instance.
+//    id<GAITracker> tracker = [[GAI sharedInstance] trackerWithTrackingId:kGoogleAnalyticsTrackingID]; 
     
 }
 

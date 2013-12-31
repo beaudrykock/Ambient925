@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "BWCReachability.h"
 #import "BWCSoundSampler.h"
 #import <FacebookSDK/FacebookSDK.h>
 
@@ -15,6 +14,5 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-@property (nonatomic, retain) BWCReachability *reachabilityNotififier;
 - (void)openSession;
 @end

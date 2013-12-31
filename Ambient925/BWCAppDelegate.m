@@ -21,15 +21,9 @@
     //self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
     
-    if ([BWCUtilities appUpgradeAvailable] && [BWCUtilities upgradeCheckAvailable])
-    {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"Update available" message:@"A newer version of this app is available. Please upgrade in the App Store" delegate:self cancelButtonTitle:@"Dismiss" otherButtonTitles: nil];
-        [alertView show];
-    }
-    
     // start reachability notifier - will post notification when internet reachability changes
     // subscribe to kInternetReachable... notifications for access
-    self.reachabilityNotififier = [[BWCReachability alloc] init];
+    // self.reachabilityNotififier = [[BWCReachability alloc] init];
     
     return YES;
 }
