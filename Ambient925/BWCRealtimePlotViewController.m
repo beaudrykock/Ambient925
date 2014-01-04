@@ -15,7 +15,27 @@
 
 @implementation BWCRealtimePlotViewController
 
-@synthesize plotLabel;
+@synthesize microphoneTextLabel;
+@synthesize audioPlot;
+@synthesize microphone;
+@synthesize plotTypeSegment;
+@synthesize microphoneSwitch;
+
+-(id)init {
+    self = [super init];
+    if(self){
+        [self initializeViewController];
+    }
+    return self;
+}
+
+-(id)initWithCoder:(NSCoder *)aDecoder {
+    self = [super initWithCoder:aDecoder];
+    if(self){
+        [self initializeViewController];
+    }
+    return self;
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -50,11 +70,14 @@
      */
     [self.microphone startFetchingAudio];
     
-    // Configure the view
-    UIImage *img = [UIImage imageNamed:@"background.png"];
-    UIColor *clr = [[UIColor alloc] initWithPatternImage:img];
-    [self.view setBackgroundColor:clr];
-    [self drawRollingPlot];
+    
+//    // Configure the view
+//    UIImage *img = [UIImage imageNamed:@"background.png"];
+//    UIColor *clr = [[UIColor alloc] initWithPatternImage:img];
+//    [self.view setBackgroundColor:clr];
+    
+    microphoneSwitch.on=YES;
+    [plotTypeSegment setSelectedSegmentIndex:0];
 
 }
 
@@ -110,6 +133,31 @@ withNumberOfChannels:(UInt32)numberOfChannels {
     // Getting audio data as a buffer list that can be directly fed into the EZRecorder or EZOutput. Say whattt...
 }
 
+#pragma mark - Actions
+-(void)changePlotType:(id)sender {
+    NSInteger selectedSegment = [sender selectedSegmentIndex];
+    switch(selectedSegment){
+        case 0:
+            [self drawBufferPlot];
+            break;
+        case 1:
+            [self drawRollingPlot];
+            break;
+        default:
+            break;
+    }
+}
+
+-(void)toggleMicrophone:(id)sender {
+    if( ![(UISwitch*)sender isOn] ){
+        [self.microphone stopFetchingAudio];
+        self.microphoneTextLabel.text = @"Microphone Off";
+    }
+    else {
+        [self.microphone startFetchingAudio];
+        self.microphoneTextLabel.text = @"Microphone On";
+    }
+}
 
 - (void)didReceiveMemoryWarning
 {

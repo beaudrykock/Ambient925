@@ -170,14 +170,10 @@
 
 -(void)addViewControllers{
  // old way for now - with segue
-    BWCRealtimePlotViewController  *realtimePlotViewController = [[BWCRealtimePlotViewController alloc] init];
+    BWCRealtimePlotViewController  *realtimePlotViewController = [[BWCRealtimePlotViewController alloc] initWithNibName:@"BWCRealtimePlotViewController" bundle:nil];
     
     [self addChildViewController:realtimePlotViewController];
-    CGRect frame = realtimePlotViewController.view.frame;
-    
-    frame.origin.y = self.view.frame.origin.y+self.view.frame.size.height-100;
-    frame.origin.x = 0.0;
-    realtimePlotViewController.view.frame = frame;
+    realtimePlotViewController.view.frame = self.view.frame;
     
     [self.view addSubview:realtimePlotViewController.view];
     [realtimePlotViewController didMoveToParentViewController:self];

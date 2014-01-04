@@ -9,13 +9,18 @@
 #import <UIKit/UIKit.h>
 #import "EZAudio.h"
 
-@interface BWCRealtimePlotViewController : UIViewController<EZMicrophoneDelegate>
+@interface BWCRealtimePlotViewController : UIViewController <EZMicrophoneDelegate>
 {
 
 }
 
-@property (strong, nonatomic) IBOutlet UILabel *plotLabel;
 @property (nonatomic,strong) EZMicrophone *microphone;
-@property (nonatomic,weak) IBOutlet EZAudioPlot *audioPlot;
+@property (nonatomic,strong) IBOutlet EZAudioPlot *audioPlot;
+@property (nonatomic, strong) IBOutlet UILabel* microphoneTextLabel;
+@property (nonatomic, strong) IBOutlet UISegmentedControl* plotTypeSegment;
+@property (nonatomic, strong) IBOutlet UISwitch* microphoneSwitch;
+
+-(IBAction)changePlotType:(id)sender;
+-(IBAction)toggleMicrophone:(id)sender;
 
 @end
