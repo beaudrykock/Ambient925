@@ -8,7 +8,6 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BWCRealtimePlotViewController">
             <connections>
                 <outlet property="plotLabel" destination="36" id="50"/>
-                <outlet property="plotStrip" destination="4" id="35"/>
                 <outlet property="view" destination="1" id="3"/>
             </connections>
         </placeholder>
@@ -17,11 +16,6 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <view opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4" customClass="F3PlotStrip">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="81"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.26000000000000001" colorSpace="calibratedRGB"/>
-                </view>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="36">
                     <rect key="frame" x="0.0" y="60" width="320" height="21"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -35,10 +29,6 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="4" firstAttribute="top" secondItem="1" secondAttribute="top" id="24"/>
-                <constraint firstItem="4" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="25"/>
-                <constraint firstAttribute="bottom" secondItem="4" secondAttribute="bottom" constant="487" id="27"/>
-                <constraint firstItem="4" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="28"/>
                 <constraint firstItem="36" firstAttribute="trailing" secondItem="1" secondAttribute="trailing" id="40"/>
                 <constraint firstItem="36" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="41"/>
                 <constraint firstItem="36" firstAttribute="top" secondItem="1" secondAttribute="top" constant="60" id="48"/>

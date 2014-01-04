@@ -52,7 +52,6 @@
 		E475AD571682BB690033289A /* BWCRealtimePlotViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E475AD551682BB690033289A /* BWCRealtimePlotViewController.m */; };
 		E475AD581682BB690033289A /* BWCRealtimePlotViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E475AD561682BB690033289A /* BWCRealtimePlotViewController.xib */; };
 		E475AD5A1682BD0A0033289A /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = E475AD591682BD0A0033289A /* background.png */; };
-		E475AD661682CDCD0033289A /* F3PlotStrip.m in Sources */ = {isa = PBXBuildFile; fileRef = E475AD651682CDCD0033289A /* F3PlotStrip.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -123,8 +122,6 @@
 		E475AD551682BB690033289A /* BWCRealtimePlotViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BWCRealtimePlotViewController.m; sourceTree = "<group>"; };
 		E475AD561682BB690033289A /* BWCRealtimePlotViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BWCRealtimePlotViewController.xib; sourceTree = "<group>"; };
 		E475AD591682BD0A0033289A /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
-		E475AD641682CDCD0033289A /* F3PlotStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = F3PlotStrip.h; sourceTree = "<group>"; };
-		E475AD651682CDCD0033289A /* F3PlotStrip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = F3PlotStrip.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -239,7 +236,6 @@
 		9F5B7C9C164BEAC400C6ED8A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
-				E475AD501682BA8E0033289A /* F3PlotStrip */,
 				9F622F42164D2AC000D3ABC6 /* CLLocation-NSDictionary */,
 				9F5B7C98164BEAC000C6ED8A /* BWCUtilities.h */,
 				9F5B7C99164BEAC000C6ED8A /* BWCUtilities.m */,
@@ -314,15 +310,6 @@
 			);
 			name = Resources;
 			path = ../../../../../Documents/FacebookSDK/FacebookSDK.framework/Resources;
-			sourceTree = "<group>";
-		};
-		E475AD501682BA8E0033289A /* F3PlotStrip */ = {
-			isa = PBXGroup;
-			children = (
-				E475AD641682CDCD0033289A /* F3PlotStrip.h */,
-				E475AD651682CDCD0033289A /* F3PlotStrip.m */,
-			);
-			name = F3PlotStrip;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -446,7 +433,6 @@
 				9F5AAB9B166518C500E18D94 /* SampleDataModel.xcdatamodeld in Sources */,
 				9F5AAB9E16652C4400E18D94 /* BWCSampleForUpload.m in Sources */,
 				E475AD571682BB690033289A /* BWCRealtimePlotViewController.m in Sources */,
-				E475AD661682CDCD0033289A /* F3PlotStrip.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,11 +514,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ambient925/Ambient925-Prefix.pch";
 				INFOPLIST_FILE = "Ambient925/Ambient925-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Library\"",
-				);
-				ONLY_ACTIVE_ARCH = NO;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv6 armv7 armv7s";
@@ -552,10 +535,8 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Ambient925/Ambient925-Prefix.pch";
 				INFOPLIST_FILE = "Ambient925/Ambient925-Info.plist";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/Library\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = "-lsqlite3.0";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				VALID_ARCHS = "armv6 armv7 armv7s";

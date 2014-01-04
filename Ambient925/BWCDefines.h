@@ -23,8 +23,8 @@
 
 // UTILITIES
 #define kGoogleAnalyticsTrackingID @"UA-35216488-2"
-#define kParseApplicationID @"Ysfw1WQVYe3e4H3prCvAlIGaOFirtsEeT4DH7Yqn"
-#define kParseClientKey @"0NvdG7jNXyMZemOPSJuW4qpwZG8rriQrlDr5WTXl"
+#define kParseApplicationID @"KVEvukHQ31BeMKZU8wQlkXR8h3euXLOsddIDlRpN"
+#define kParseClientKey @"iaQp5fyhUrZ9jqKEg12iHa7cmRwXbf0fQIUcPr9r"
 
 // USER DEFAULTS
 #define kUD_upgradeCheck @"upgradeCheck"

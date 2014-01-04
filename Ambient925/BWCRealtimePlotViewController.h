@@ -7,15 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "F3PlotStrip.h"
+#import "EZAudio.h"
 
-@interface BWCRealtimePlotViewController : UIViewController
+@interface BWCRealtimePlotViewController : UIViewController<EZMicrophoneDelegate>
 {
-@private
-    NSTimer     *m_timer;       // Timer for updating values
+
 }
 
-@property (strong, nonatomic) IBOutlet F3PlotStrip *plotStrip;
 @property (strong, nonatomic) IBOutlet UILabel *plotLabel;
+@property (nonatomic,strong) EZMicrophone *microphone;
+@property (nonatomic,weak) IBOutlet EZAudioPlot *audioPlot;
 
 @end
